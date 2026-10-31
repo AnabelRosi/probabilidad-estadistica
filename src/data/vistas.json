@@ -1,0 +1,131 @@
+{
+ "1": {
+  "pres": {
+   "paginas": 12,
+   "alts": [
+    "Diapositiva 1 de 12: 1 ESTADÍSTICA DESCRIPTIVA Población y muestra, variables, tablas de frecuencias, gráficos esta",
+    "Diapositiva 2 de 12: ¿Qué es la estadística? Estudio de los fenómenos aleatorios: teoría y aplicación de mé",
+    "Diapositiva 3 de 12: Población y muestra estadística Población P EJEMPLO: TURISMO INTERNO EN MEND",
+    "Diapositiva 4 de 12: VA TA Clasificación de las variables Las variables estadísticas son las cara",
+    "Diapositiva 5 de 12: Etapas de una investigación estadística 1 2 3 4 5 Formulación del Organización y General",
+    "Diapositiva 6 de 12: AT O S Tabla de distribución de frecuencias Frec. absoluta (fa): cantidad de vec",
+    "Diapositiva 7 de 12: TA Gráfico de barras y gráfico circular Barras: comparan variables discret",
+    "Diapositiva 8 de 12: TA VA Histograma Se utiliza para variabl",
+    "Diapositiva 9 de 12: Media aritmética Promedio aritmético de las observaciones. E",
+    "Diapositiva 10 de 12: Mediana y moda Me Mediana Mo Moda Valor central de un conjun",
+    "Diapositiva 11 de 12: Varianza, desviación estándar y CV Las medidas de tendencia central no i",
+    "Diapositiva 12 de 12: Medidas de forma: asimetría Comparan la forma de la distribución (histograma o"
+   ]
+  },
+  "tp": {
+   "paginas": 9,
+   "alts": [
+    "Página 1 de 9: TRABAJO PRÁCTICO Nº 1 Actividad Integradora: Estadística Descriptiva aplicada al Desarrollo de Software Título",
+    "Página 2 de 9",
+    "Página 3 de 9: Es el \"promedio\" de todos los datos. Nos dice que, si repartiéramos el valor total entre los 20 datos por igua",
+    "Página 4 de 9: Moda = 4 y 5 (bimodal) Son los valores que más se repiten (ambos con frecuencia 4). Nos dice cuáles son los da",
+    "Página 5 de 9",
+    "Página 6 de 9: Cálculo de la varianza muestral Varianza ( σ ² = 2.244 / s² = 2.3621): indica el grado de dispersión de los da",
+    "Página 7 de 9: Desviación estándar 1.498 1.5369): en promedio, los valores de la muestra se alejan aproximadament",
+    "Página 8 de 9: [4 – 6) 5 8 40% 13 [6 – 8) 7 5 25% 18 [8 – 10) 9 2 10% 20 Total -------------- 20 100% -------------- 4. A par",
+    "Página 9 de 9: Que el tiempo típico de resolución ronda las 5 horas, y al ser media y mediana tan cercanas, ese valor es conf"
+   ]
+  }
+ },
+ "2": {
+  "pres": {
+   "paginas": 10,
+   "alts": [
+    "Diapositiva 1 de 10: 2 PROBABILIDAD Fundamentos de la inferencia estadística: experimentos aleatorios, reglas de pr",
+    "Diapositiva 2 de 10: TA Experimentos aleatorios y espacio muestral Experimento aleatorio ε",
+    "Diapositiva 3 de 10: TA Evento complementario y otros ejemplos MÁS EJEMPLOS S Experimento a",
+    "Diapositiva 4 de 10: La definición de Laplace (1812) EJEMPLO: EL DADO “Probabilidad de un suceso",
+    "Diapositiva 5 de 10: Reglas 1, 2 y 3 1 Complemento 2 Mutuamente excluyentes 3 No excluyente",
+    "Diapositiva 6 de 10: Ejemplo: previsión de grandes nevadas Estimaciones de probabilidad s",
+    "Diapositiva 7 de 10: TA Probabilidad de que dos sucesos ocurran a la vez Probabilidad conjunta",
+    "Diapositiva 8 de 10: Probabilidad de A dado que ocurrió B Probabilidad condicional P(",
+    "Diapositiva 9 de 10: TA L Eventos independientes y teorema de la probabilid",
+    "Diapositiva 10 de 10: Teorema de Bayes Permite “revertir” una probabilidad condicional: a partir de"
+   ]
+  },
+  "tp": {
+   "paginas": 8,
+   "alts": [
+    "Página 1 de 8: TRABAJO PRÁCTICO Nº 2 PROBABILIDAD Ejercicio 1 En una urna hay 8 bolas rojas, 5 azules y 7 verdes. Se extrae u",
+    "Página 2 de 8: Calcular: Interpretación: F (fútbol) = 28 B (básquet) = 20 A (ambos) = 10 o (F∩B) a) La probabilidad de que un",
+    "Página 3 de 8: Ejercicio 3 Una caja contiene 6 lápices negros y 4 lápices rojos. Se extraen dos lápices sucesivamente sin rep",
+    "Página 4 de 8: Vamos a resolverlo de la forma (negro luego rojo) usando el cálculo de la C. 4 4 18 P (negro y luego rojo) = 4",
+    "Página 5 de 8: La probabilidad de que una persona pertenezca al área administrativa, sabiendo que es mujer es del 40% d) La p",
+    "Página 6 de 8: Aplicaremos el teorema de probabilidad total, ya que el producto puede salir defectuoso, a través de, distinto",
+    "Página 7 de 8: Si se elige al azar un producto defectuoso, existe una probabilidad del 40,3% de que haya sado fabricado por l",
+    "Página 8 de 8: Ejercicio 8 Verdadero o Falso Indique si las siguientes afirmaciones son verdaderas o falsas. Justifique las f"
+   ]
+  }
+ },
+ "3": {
+  "pres": {
+   "paginas": 10,
+   "alts": [
+    "Diapositiva 1 de 10: 3 Variables Aleatorias Discretas Modelos Discretos · Binomial · Geométrica · Poisson Probabili",
+    "Diapositiva 2 de 10: AT TA ¿Qué es una Variable Aleatoria? Definición Una variable aleato",
+    "Diapositiva 3 de 10: Función de Probabilidad f(x) Definición Propiedades fₓ",
+    "Diapositiva 4 de 10: Esperanza y Varianza Esperanza E(X) Varianza Var(X) μ = E(X) = Σ xᵢ · f(xᵢ) σ²",
+    "Diapositiva 5 de 10: LT O Clientes en la primera media hora X 0 1 2 3 4 P(X=x) 0,10 0,25 0,35 0,20 0,10",
+    "Diapositiva 6 de 10: Distribución Binomial Condiciones Función de probabilidad P(X = x) = C(n,x) ·",
+    "Diapositiva 7 de 10: Binomial Negativa y Geométrica Binomial Negativa (Pascal) Geométrica Caso part",
+    "Diapositiva 8 de 10: Distribución de Poisson Definición y condiciones Fórmulas Modela el número de",
+    "Diapositiva 9 de 10: PA Resumen de distribuciones discretas Distribución ¿Qué modela? Esperanza",
+    "Diapositiva 10 de 10: AV E Variables Aleatorias Discretas • Función de probabilidad y acumulada • Esperanza y vari"
+   ]
+  },
+  "tp": {
+   "paginas": 10,
+   "alts": [
+    "Página 1 de 10: TRABAJO PRÁCTICO Nº 3 Variables Aleatorias Discretas y Modelos de Probabilidad Ejercicio 1. Variable aleatoria",
+    "Página 2 de 10: E(X²) = 0²·0,10 + 1²·0,20 + 2²·0,40 + 3²·0,20 + 4²·0,10 E(X²) = 0 + 0,20 + 1,60 + 1,80 + 1,60 = 5,20 Var(X) =",
+    "Página 3 de 10: b) Probabilidad de encontrar como máximo 3 defectuosos → P(X ≤ 3) P(X ≤ 3) = P(0) + P(1) + P(2) + P(3) P(0) =",
+    "Página 4 de 10: c) Probabilidad de encontrar al menos un tornillo defectuoso → P(X ≥ 1) P(X ≥ 1) = 1 − P(X = 0) = 1 − 0,3677 =",
+    "Página 5 de 10: E(X) ≈ 4,286 c) Varianza Var(X) = r(1−p) / p² = 3 · 0,30 / 0,49 ≈ 1,837 Var(X) ≈ 1,837 Ejercicio 4. Distribuci",
+    "Página 6 de 10: b) Probabilidad de que el primer acierto ocurra después del tercer intento → P(X > 3) P(X > 3) = (1−p)³ = (0,6",
+    "Página 7 de 10: Var(X) = (1−p) / p² = 0,60 / 0,16 = 3,75 Var(X) = 3,75 Ejercicio 5. Distribución de Poisson Una central de eme",
+    "Página 8 de 10: c) Probabilidad de recibir más de 6 llamadas → P(X > 6) P(X > 6) = 1 − P(X ≤ 6) ≈ 1 − 0,7622 = 0,2378 P(X > 6)",
+    "Página 9 de 10: Var(X) 5 Var(X) = 5 Ejercicio 6. Identificación de distribuciones Para cada situación se indica la distr",
+    "Página 10 de 10: Integrantes Anabel Rosi Cecilia Morales Página 10 de 10"
+   ]
+  }
+ },
+ "4": {
+  "pres": {
+   "paginas": 10,
+   "alts": [
+    "Diapositiva 1 de 10: 4 Variable Aleatoria Continua Modelos Continuos · Función de Densidad · Distribución Normal Pr",
+    "Diapositiva 2 de 10: AT ¿Qué es una Variable Aleatoria Continua? Definición X es una",
+    "Diapositiva 3 de 10: Función de Densidad f(x) Definición Condiciones fₓ 1) f(x) ≥ 0",
+    "Diapositiva 4 de 10: Función de Distribución Acumulada F(x) F(x) = P(X ≤ x) = ∫₋∞ˣ f(t) d",
+    "Diapositiva 5 de 10: LT O Función de densidad por tramos f(x) = x/8 (0 2) · 1/4 (2 4) · (6−x)/8",
+    "Diapositiva 6 de 10: PA L Distribución Normal (Gauss) Modelo de probabilidad continua que d",
+    "Diapositiva 7 de 10: Características y Tipificación Características Tipificación (Z) Se transfo",
+    "Diapositiva 8 de 10: Regla Empírica (68-95-99,7) 68 % Aproximadamente 2 de cada",
+    "Diapositiva 9 de 10: LT O Calificaciones ~ Normal(μ=70, σ=10) ¿Cuál es la probabilidad de que un estudiante",
+    "Diapositiva 10 de 10: AV E Variable Aleatoria Continua • Función de densidad y distribución acumulada • Probabilid"
+   ]
+  },
+  "tp": {
+   "paginas": 12,
+   "alts": [
+    "Página 1 de 12: TRABAJO PRÁCTICO Nº 4 Variable Aleatoria Continua y Modelo Normal Ejercicio 1 Función de densidad y de distrib",
+    "Página 2 de 12: c) P(1 4) P(1 4) = F(4) − F(1) F(4) = 1 − (6−4)²/16 = 1 − 4/16 = 0,75 F(1) = 0,0625 ⇒ 0,75 − 0,062",
+    "Página 3 de 12: e) P(X > 4) P(X > 4) = 1 − F(4) = 1 − 0,75 = 0,25 f) P(3 6) P(3 6) = F(6) − F(3) = 1 − 0,50 = 0,50",
+    "Página 4 de 12: P(X = 2) = 0 En una variable aleatoria continua la probabilidad de un valor puntual es siempre cero (el área b",
+    "Página 5 de 12: b) P(X ≤ 4) P(X ≤ 4) = F(4) = (4−1)/4 = 0,75 c) P(2 5) P(2 5) = F(5) − F(2) = 1 − 0,25 = 0,75 d) P",
+    "Página 6 de 12: P(X ≥ 3) = 1 − F(3) = 1 − (3−1)/4 = 1 − 0,50 = 0,50 e) P(X = 4) P(X = 4) = 0 Ejercicio 3 – Modelo Normal",
+    "Página 7 de 12: Ejercicio 4 – Duración de baterías X ∼ N(μ = 520 horas, σ = 40 horas). Inciso Cálculo de Z Resultado a) P(X <",
+    "Página 8 de 12: Ejercicio 5 – Peso de paquetes de arroz X ∼ N(μ = 1000 g, σ = 25 g). Inciso Cálculo de Z Resultado a) P(X < 98",
+    "Página 9 de 12: Ejercicio 6 – Continua o Normal a) Tiempo que tarda un estudiante en resolver un examen Variable continua (sue",
+    "Página 10 de 12: Continua + Normal. Variable continua; los errores de fabricación suelen distribuirse normalmente alrededor del",
+    "Página 11 de 12: d) ¿Qué información proporciona la tabla de la normal estándar? La tabla entrega P(Z ≤ z), es decir el área ac",
+    "Página 12 de 12"
+   ]
+  }
+ }
+}

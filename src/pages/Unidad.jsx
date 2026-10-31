@@ -8,6 +8,7 @@ import DownloadRounded from '@mui/icons-material/DownloadRounded'
 import OpenInNewRounded from '@mui/icons-material/OpenInNewRounded'
 import MaterialCard from '../components/MaterialCard.jsx'
 import ContenidoApunte from '../components/ContenidoApunte.jsx'
+import VisorPaginas from '../components/VisorPaginas.jsx'
 import Encabezado from '../components/Encabezado.jsx'
 import NoEncontrada from './NoEncontrada.jsx'
 import { UNIDADES, materialesDeUnidad, nombreArchivo, urlMaterial } from '../data/materiales.js'
@@ -173,6 +174,7 @@ export default function Unidad() {
               <MaterialCard material={presentacion} Icono={ICONO_TIPO.presentacion} estilo={estilo} />
             </Grid>
           </Grid>
+          <VisorPaginas unidad={unidad.numero} clave="pres" titulo="la presentación" estilo={estilo} />
         </Seccion>
       )}
 
@@ -183,6 +185,7 @@ export default function Unidad() {
               <MaterialCard material={tp} Icono={ICONO_TIPO.tp} estilo={estilo} />
             </Grid>
           </Grid>
+          <VisorPaginas unidad={unidad.numero} clave="tp" titulo="el trabajo práctico" estilo={estilo} />
         </Seccion>
       )}
 

@@ -52,7 +52,7 @@ export default function MaterialCard({ material, Icono, estilo }) {
   const visible = Boolean(disponible && urlVista)
   const { Icono: IconoEstado } = PRESENTACION_ESTADO[material.estado]
   const nota = disponible && material.vista
-    ? `Se abre en el navegador como PDF. "Descargar" baja el archivo original (${material.formato}).`
+    ? `Para leerlo en esta página usá "Ver aquí" (más abajo). "Ver" abre el PDF en otra pestaña y "Descargar" baja el archivo original (${material.formato}).`
     : disponible && !visible
       ? `El navegador no muestra archivos ${material.formato}: descargalo para abrirlo con un programa compatible.`
       : notaDe(material)
