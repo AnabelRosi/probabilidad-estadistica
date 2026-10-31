@@ -1,0 +1,70 @@
+{
+  "omitir": ["UNIDAD NUMERO 3", "VARIABLES ALEATORIA DISCRETA. MODELOS DISCRETOS."],
+  "titulos": [
+    ["Función probabilidad", 1],
+    ["Función de distribución acumulada", 1],
+    ["Esperanza, Valor Esperado o Media de una v.a. discreta", 1],
+    ["Varianza de una v.a.discreta", 1],
+    ["Ejercicio: Variable aleatoria discreta", 1],
+    ["Modelos discretos", 1],
+    ["MODELO BINOMIAL", 1],
+    ["MODELO BINOMIAL NEGATIVO (DISTRIBUCIÓN DE PASCAL)", 1],
+    ["MODELO GEOMÉTRICO", 1],
+    ["MODELO DE POISSON", 1],
+    ["Resumen", 1],
+    ["Ejemplo:", 2],
+    ["Propiedades de la función probabilidad:", 2],
+    ["Se pide:", 2],
+    ["a) Verificación de la función de probabilidad", 2],
+    ["b) Función de probabilidad acumulada", 2],
+    ["c) Esperanza matemática", 2],
+    ["d) Varianza", 2],
+    ["e) Desviación estándar", 2],
+    ["Definición", 2],
+    ["Condiciones", 2],
+    ["Función de probabilidad", 2],
+    ["Esperanza matemática", 2],
+    ["Varianza", 2],
+    ["Desviación estándar", 2],
+    ["Ejemplo resuelto", 2],
+    ["Apps que utilizaremos", 2],
+    ["Esperanza:", 3],
+    ["Varianza:", 3],
+    ["Desviación estándar:", 3]
+  ],
+  "imagenesTexto": {
+    "img-01-1.png": "<p>Si un espacio muestral contiene un número finito de posibilidades, se llama <strong>espacio muestral discreto</strong>. Por lo tanto una <strong>V.A discreta</strong> es aquella que se pueden contar sus conjuntos de resultados posibles.</p>"
+  },
+  "alt": {
+    "img-01-5.png": "Diagrama: la variable aleatoria X asigna a cada resultado del espacio muestral Ω un número de la recta real.",
+    "img-01-2.png": "Diagrama de la variable aleatoria X para el lanzamiento de una moneda: cruz se asigna al número 1 y cara al número 0 de la recta real.",
+    "img-01-3.png": "f subíndice X, de los reales en el intervalo [0; 1]: x se transforma en f(x) = P(X = x).",
+    "img-01-4.png": "Diagrama de la función de probabilidad: X lleva cada resultado ω del espacio muestral Ω a un valor x de R, y f lleva ese valor x a un número entre 0 y 1.",
+    "img-02-1.png": "F subíndice x, de los reales en el intervalo [0, 1]: x se transforma en F(X) = P(X < x).",
+    "img-02-2.png": "Diagrama de la función de distribución acumulada: X lleva el suceso A del espacio muestral Ω a un valor x de R, y F lleva ese valor x a P(A), un número entre 0 y 1.",
+    "img-02-3.png": "μ = E(X) = suma, para cada x_i, de x_i por f(x_i).",
+    "img-02-4.png": "σ² de X = VAR(X) = suma, para x_i perteneciente a X(Ω), de (x_i − μ)² por f de X en x_i.",
+    "img-02-5.png": "σ² = VAR(X) = E[(X − μ)²] = suma, para cada x, de (x − μ)² por f(x).",
+    "img-05-1.png": "Ícono de la aplicación f(x) Probability.",
+    "img-05-2.png": "Pantalla de inicio de la aplicación Probability Distributions, versión 5.5.",
+    "img-05-3.png": "P(X = x) = combinatorio de n sobre x, por p elevado a x, por (1 − p) elevado a n − x.",
+    "img-07-1.png": "P(X = x) = combinatorio de x − 1 sobre r − 1, por p elevado a r, por (1 − p) elevado a x − r.",
+    "img-07-2.png": "E(X) = r / p.",
+    "img-07-3.png": "Var(X) = r(1 − p) / p².",
+    "img-08-1.png": "P(X = x) = (1 − p) elevado a x − 1, por p.",
+    "img-08-2.png": "E(X) = 1 / p.",
+    "img-08-3.png": "Var(X) = (1 − p) / p².",
+    "img-09-1.png": "P(X = x) = e elevado a −λ por λ elevado a x, dividido por x factorial.",
+    "img-09-2.png": "E(X) = λ.",
+    "img-09-3.png": "Var(X) = λ."
+  },
+  "tablas": [
+    { "pagina": 3, "caja": [80, 188, 335, 232], "cols": [146, 181, 217, 252, 292], "filas": [190, 208, 232], "encabezado": 1, "leyenda": "Función de probabilidad de X" },
+    { "pagina": 3, "caja": [80, 560, 350, 632], "cols": [150, 190, 226, 266, 310], "filas": [560, 580, 607, 632], "encabezado": 1, "leyenda": "Función de probabilidad y función de probabilidad acumulada de X" },
+    { "pagina": 10, "caja": [45, 380, 540, 505], "cols": [170, 383, 438], "filas": [380, 398, 414, 444, 474, 505], "encabezado": 1, "primeraColumnaTh": true, "leyenda": "Resumen de los modelos discretos" }
+  ],
+  "reemplazos": [
+    ["1) fX(x) ≥ 0", "1) f<sub>X</sub>(x) ≥ 0"],
+    ["∑ <sub>x</sub>", "∑<sub>x</sub>"]
+  ]
+}

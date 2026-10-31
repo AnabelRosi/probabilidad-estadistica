@@ -43,19 +43,19 @@ function notaDe(material) {
   if (material.estado === ESTADOS.pendienteAutorizacion && material.autoria === AUTORIA.porConfirmar) {
     return 'Se habilitará cuando se confirmen la autoría y la autorización de publicación.'
   }
-  if (material.estado === ESTADOS.materialFaltante && material.tipo === 'tp') {
-    return 'Todavía no recibimos la consigna original de este trabajo práctico.'
-  }
   return PRESENTACION_ESTADO[material.estado].nota
 }
 
 export default function MaterialCard({ material, Icono, estilo }) {
   const disponible = material.estado === ESTADOS.disponible && material.archivo
-  const visible = disponible && FORMATOS_VISIBLES.includes(material.formato)
+  const urlVista = material.vista || (FORMATOS_VISIBLES.includes(material.formato) ? material.archivo : null)
+  const visible = Boolean(disponible && urlVista)
   const { Icono: IconoEstado } = PRESENTACION_ESTADO[material.estado]
-  const nota = disponible && !visible
-    ? `El navegador no muestra archivos ${material.formato}: descargalo para abrirlo con un programa compatible.`
-    : notaDe(material)
+  const nota = disponible && material.vista
+    ? `Se abre en el navegador como PDF. "Descargar" baja el archivo original (${material.formato}).`
+    : disponible && !visible
+      ? `El navegador no muestra archivos ${material.formato}: descargalo para abrirlo con un programa compatible.`
+      : notaDe(material)
 
   return (
     <Card
@@ -129,10 +129,10 @@ export default function MaterialCard({ material, Icono, estilo }) {
               variant="contained"
               size="small"
               startIcon={<VisibilityRounded />}
-              href={urlMaterial(material.archivo)}
+              href={urlMaterial(urlVista)}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Ver ${material.titulo} (${material.formato}, se abre en una pestaña nueva)`}
+              aria-label={`Ver ${material.titulo} (${material.vista ? 'PDF' : material.formato}, se abre en una pestaña nueva)`}
             >
               Ver
             </Button>

@@ -1,6 +1,6 @@
 # Probabilidad y Estadística: sitio web
 
-Sitio educativo con el material de la materia organizado en cuatro unidades y una sección de material complementario.
+Sitio educativo con el material de la materia organizado en cuatro unidades.
 Usa React, Vite, Material UI y React Router.
 
 ## Estructura
@@ -13,10 +13,10 @@ proyecto-web/
 └── src/
     ├── data/materiales.js   unidades, temas y materiales (fuente única de contenido)
     ├── components/          Layout (menú) y MaterialCard (ver / descargar)
-    └── pages/               Inicio, Unidad, Complementario, NoEncontrada
+    └── pages/               Inicio, Unidad, NoEncontrada
 ```
 
-Rutas (HashRouter): `#/`, `#/unidad/1` … `#/unidad/4`, `#/complementario`.
+Rutas (HashRouter): `#/`, `#/unidad/1` … `#/unidad/4`.
 
 ## Uso local
 
@@ -36,8 +36,9 @@ El inventario está en `../inventario/inventario-materiales.csv`.
 2. En `src/data/materiales.js`, agregarlo con `publicado(...)` indicando su formato real.
 3. Registrar en el inventario su `estado_publicacion`, `ruta_publica` y `acciones_web`.
 
-Solo los materiales con estado `disponible` y `archivo` muestran acciones: **Ver** (PDF y PNG, en una
-pestaña nueva) y **Descargar** (todos los formatos; PPTX y DOCX solo se descargan).
+Solo los materiales con estado `disponible` y `archivo` muestran acciones: **Ver** (en una pestaña nueva) y **Descargar**.
+Los PPTX y DOCX se ven como PDF: junto a cada uno hay una copia `.pdf` con el mismo nombre (convertida con LibreOffice),
+y "Descargar" baja el archivo original. Si se cambia un PPTX o DOCX hay que volver a generar su PDF.
 
 ## Criterio de publicación vigente
 
@@ -46,8 +47,6 @@ pestaña nueva) y **Descargar** (todos los formatos; PPTX y DOCX solo se descarg
 - Apuntes, presentaciones y TP son copias idénticas de los originales: no se alteran créditos ni atribuciones internas.
   Las cuatro infografías se publican en su versión corregida (`*_corregida.png`); los originales se conservan.
   Las discrepancias de autoría y las erratas conocidas se registran en el inventario.
-- Los recursos que todavía no se recibieron (consignas originales, programa, tabla normal) se muestran como
-  pendientes de recibir, sin archivo.
 
 ## Publicación en GitHub Pages
 

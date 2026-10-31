@@ -1,0 +1,36 @@
+{
+  "omitir": ["UNIDAD Nº 4.", "VARIABLE ALEATORIA CONTINUA. MODELOS CONTINUOS."],
+  "titulos": [
+    ["Variable aleatoria continua", 1],
+    ["Funcion densidad de una V. A. continua", 1],
+    ["Funcion de distribución acumulada", 1],
+    ["REGLA GENERAL", 2],
+    ["Ejemplo:", 2],
+    ["Calcular:", 2],
+    ["MODELO NORMAL", 1],
+    ["Definición", 2],
+    ["Función de densidad", 2],
+    ["Características de la distribución normal", 2],
+    ["Distribución normal estándar", 2],
+    ["Regla empírica", 2],
+    ["Ejemplo resuelto", 2],
+    ["Paso 1.*", 3],
+    ["Paso 2.*", 3],
+    ["Paso 3.*", 3],
+    ["Interpretación", 2]
+  ],
+  "alt": {
+    "img-01-2.png": "La función de densidad f de x va de los reales a los reales: a cada x le corresponde f(x).",
+    "img-01-3.png": "Condiciones de una función de densidad: 1. f(x) es mayor o igual que 0 para todo x. 2. La integral de f(x) dx desde menos infinito hasta infinito es igual a 1: el área bajo toda la gráfica de f(x) es 1.",
+    "img-01-1.png": "Gráfico de una curva de densidad con el área sombreada entre a y b, que representa la probabilidad P(a < X < b).",
+    "img-02-1.png": "La función de distribución F de x va de los reales a los reales: a cada x le corresponde F(x). F(x) = P(X ≤ x) = integral de f(t) dt desde menos infinito hasta x.",
+    "img-02-2.png": "Función de densidad por tramos: f(x) = x/8 si 0 ≤ x < 2; 1/4 si 2 ≤ x < 4; (6 − x)/8 si 4 ≤ x ≤ 6; 0 en otro caso.",
+    "img-02-3.png": "Función de distribución acumulada por tramos: F(x) = 0 si x < 0; x²/16 si 0 ≤ x < 2; x/4 − 1/4 si 2 ≤ x < 4; 1 − (6 − x)²/16 si 4 ≤ x ≤ 6; 1 si x > 6.",
+    "img-04-1.png": "Función de densidad normal: f(x; μ, σ) = 1 / (√(2π) σ) por e elevado a menos (x − μ)² / (2σ²), para x entre menos infinito y más infinito.",
+    "img-05-1.png": "Esquema de tipificación: una variable X con distribución normal de media μ y desvío σ se transforma en Z = (x − μ) / σ, con distribución normal estándar N(0,1); la inversa es x = μ + z · σ.",
+    "img-05-2.png": "Curva normal con el eje marcado en μ − 3σ, μ − σ, μ + σ y μ + 3σ."
+  },
+  "recortes": [
+    { "pagina": 2, "id": "integral", "caja": [150, 214, 445, 256], "alt": "P(a < X < b) = P(a ≤ X ≤ b) = integral de a hasta b de f(x) dx = F(b) − F(a)." }
+  ]
+}

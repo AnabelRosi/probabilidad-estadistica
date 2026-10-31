@@ -1,0 +1,170 @@
+<p>Sea Ω el espacio muestral ligado a un experimento aleatorio. Una variable aleatoria (V.A.) es una función X que asigna a cada elemento ω del espacio muestral un número del conjunto de los números reales R.</p>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-01-5.png" alt="Diagrama: la variable aleatoria X asigna a cada resultado del espacio muestral Ω un número de la recta real." style="width:202px" loading="lazy"></figure>
+<h4>Ejemplo:</h4>
+<p>Є= Arrojar una moneda</p>
+<p>Ω={cara, cruz}</p>
+<p>X: número de cruces obtenidas al lanzar un dado</p>
+<p>X(cara)= 0; X(cruz)=1</p>
+<p>X(Ω) = {0; 1} es la imagen de Ω por X.</p>
+<div class="recuadro"><p>Si un espacio muestral contiene un número finito de posibilidades, se llama <strong>espacio muestral discreto</strong>. Por lo tanto una <strong>V.A discreta</strong> es aquella que se pueden contar sus conjuntos de resultados posibles.</p></div>
+<figure class="figura"><img src="materiales/contenido/unidad-3/u3-01-2.png" alt="Diagrama de la variable aleatoria X para el lanzamiento de una moneda: cruz se asigna al número 1 y cara al número 0 de la recta real." style="width:259px" loading="lazy"></figure>
+<h3>Función probabilidad</h3>
+<p>Definición: Sea (Ω; P) un espacio de probabilidad y X una variable aleatoria discreta definida en Ω. Se llama función masa de probabilidad a la función:</p>
+<figure class="fila"><img src="materiales/contenido/unidad-3/u3-01-3.png" alt="f subíndice X, de los reales en el intervalo [0; 1]: x se transforma en f(x) = P(X = x)." style="width:211px" loading="lazy"><img src="materiales/contenido/unidad-3/u3-01-4.png" alt="Diagrama de la función de probabilidad: X lleva cada resultado ω del espacio muestral Ω a un valor x de R, y f lleva ese valor x a un número entre 0 y 1." style="width:289px" loading="lazy"></figure>
+<h4>Propiedades de la función probabilidad:</h4>
+<p>1) f<sub>X</sub>(x) ≥ 0 ∀ x ∈ R</p>
+<p>2) ∑<sub>x</sub> f(x) = 1</p>
+<p>3) P(X = x) = f(x)</p>
+<h3><strong>Función de distribución acumulada</strong></h3>
+<p><strong>Definición: </strong>Sea (Ω; P) un espacio de probabilidad y X una v.a. definida en Ω. Se llama función de distribución acumulativa de la v.a. X a la función:</p>
+<figure class="fila"><img src="materiales/contenido/unidad-3/u3-02-1.png" alt="F subíndice x, de los reales en el intervalo [0, 1]: x se transforma en F(X) = P(X &lt; x)." style="width:211px" loading="lazy"><img src="materiales/contenido/unidad-3/u3-02-2.png" alt="Diagrama de la función de distribución acumulada: X lleva el suceso A del espacio muestral Ω a un valor x de R, y F lleva ese valor x a P(A), un número entre 0 y 1." style="width:308px" loading="lazy"></figure>
+<h3><strong>Esperanza, Valor Esperado o Media de una v.a. discreta</strong></h3>
+<p>Sea X una variable aleatoria con distribución de probabilidad f(x). La medio o valor esperado de X es:</p>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-02-3.png" alt="μ = E(X) = suma, para cada x_i, de x_i por f(x_i)." style="width:236px" loading="lazy"></figure>
+<p>La esperanza de una V.A describe el lugar donde se centra la distribución de probabilidad.</p>
+<h3><strong>Varianza de una v.a.discreta</strong></h3>
+<p>Puede ocurrir que tengamos dos v.a. X<sub>1 </sub>y X<sub>2 </sub>que tengan el mismo valor medio y sin embargo su funciones densidad sean diferentes.</p>
+<p>Una medida que refleja como se distribuyen los valores alrededor de la media es la Varianza.</p>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-02-4.png" alt="σ² de X = VAR(X) = suma, para x_i perteneciente a X(Ω), de (x_i − μ)² por f de X en x_i." style="width:355px" loading="lazy"></figure>
+<p>La varianza de una variable aleatoria da una idea de la "forma de la distribución", es decir en cuanto se alejan los valores de la variable respecto del valor central.</p>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-02-5.png" alt="σ² = VAR(X) = E[(X − μ)²] = suma, para cada x, de (x − μ)² por f(x)." style="width:384px" loading="lazy"></figure>
+<h3><strong>Ejercicio: Variable aleatoria discreta</strong></h3>
+<p>En un comercio se registró la cantidad de clientes que realizan una compra durante la primera media hora de atención. La variable aleatoria <strong>X </strong>representa el número de clientes que compran en ese período.</p>
+<p>La siguiente tabla muestra la función de probabilidad de <strong>X</strong>.</p>
+<div class="tabla"><table><caption>Función de probabilidad de X</caption><thead><tr><th scope="col">X</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th></tr></thead><tbody><tr><td>F(x) = P(X=x)</td><td>0,10</td><td>0,25</td><td>0,35</td><td>0,20</td><td>0,10</td></tr></tbody></table></div>
+<h4><strong>Se pide:</strong></h4>
+<p>a) Verificar que la tabla representa una función de probabilidad.</p>
+<p>b) Construir la función de probabilidad acumulada.</p>
+<p>c) Calcular la esperanza matemática.</p>
+<p>d) Calcular la varianza.</p>
+<p>e) Calcular la desviación estándar.</p>
+<h4>a) Verificación de la función de probabilidad</h4>
+<p>Se verifica que la suma de todas las probabilidades sea igual a 1.</p>
+<p>0,10 + 0,25 + 0,35 + 0,20 + 0,10 = 1</p>
+<p>Como la suma es igual a 1 y todas las probabilidades son mayores o iguales que cero, la tabla representa una función de probabilidad.</p>
+<h4>b) Función de probabilidad acumulada</h4>
+<div class="tabla"><table><caption>Función de probabilidad y función de probabilidad acumulada de X</caption><thead><tr><th scope="col">X</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th></tr></thead><tbody><tr><td>F(x) = P(X=x)</td><td>0,10</td><td>0,25</td><td>0,35</td><td>0,20</td><td>0,10</td></tr><tr><td>F(X)</td><td>0,10</td><td>0,35</td><td>0,70</td><td>0,90</td><td>1,00</td></tr></tbody></table></div>
+<h4>c) Esperanza matemática</h4>
+<p>E(X) = Σ[x · P(x)]</p>
+<p>E(X) = (0 × 0,10) + (1 × 0,25) + (2 × 0,35) + (3 × 0,20) + (4 × 0,10)</p>
+<p>E(X) = 0 + 0,25 + 0,70 + 0,60 + 0,40</p>
+<p class="formula-texto"><strong>E(X) = 1,95</strong></p>
+<h4>d) Varianza</h4>
+<p>Primero se calcula E(X²).</p>
+<p class="formula-texto"><strong>E(X²) = Σ[x² · P(x)]</strong></p>
+<p>E(X²) = (0² × 0,10) + (1² × 0,25) + (2² × 0,35) + (3² × 0,20) + (4² × 0,10)</p>
+<p>E(X²) = 0 + 0,25 + 1,40 + 1,80 + 1,60</p>
+<p class="formula-texto"><strong>E(X²) = 5,05</strong></p>
+<p>Ahora se calcula la varianza.</p>
+<p class="formula-texto"><strong>Var(X) = E(X²) − [E(X)]²</strong></p>
+<p>Var(X) = 5,05 − (1,95)²</p>
+<p>Var(X) = 5,05 − 3,8025</p>
+<p class="formula-texto"><strong>Var(X) = 1,2475</strong></p>
+<h4>e) Desviación estándar</h4>
+<p class="formula-texto"><strong>σ = √Var(X)</strong></p>
+<p>σ = √1,2475</p>
+<p class="formula-texto"><strong>σ = 1,12</strong></p>
+<h3><strong>Modelos discretos</strong></h3>
+<h4>Apps que utilizaremos</h4>
+<figure class="fila"><img src="materiales/contenido/unidad-3/u3-05-1.png" alt="Ícono de la aplicación f(x) Probability." style="width:130px" loading="lazy"><img src="materiales/contenido/unidad-3/u3-05-2.png" alt="Pantalla de inicio de la aplicación Probability Distributions, versión 5.5." style="width:129px" loading="lazy"></figure>
+<h3><strong>MODELO BINOMIAL</strong></h3>
+<h4><strong>Definición</strong></h4>
+<p>La distribución binomial es un modelo de probabilidad discreto que permite calcular la probabilidad de obtener un número determinado de éxitos en n ensayos independientes, cuando cada ensayo tiene únicamente dos resultados posibles: éxito o fracaso.</p>
+<h4><strong>Condiciones</strong></h4>
+<ul><li>El número de ensayos (n) es fijo.</li><li>Cada ensayo es independiente de los demás.</li><li>Solo existen dos resultados posibles: éxito o fracaso.</li><li>La probabilidad de éxito (p) permanece constante en todos los ensayos.</li></ul>
+<h4><strong>Función de probabilidad</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-05-3.png" alt="P(X = x) = combinatorio de n sobre x, por p elevado a x, por (1 − p) elevado a n − x." style="width:270px" loading="lazy"></figure>
+<p>donde:</p>
+<ul><li>n: número de ensayos.</li><li>x: número de éxitos.</li><li>p: probabilidad de éxito.</li><li>q = 1 – p: probabilidad de fracaso.</li></ul>
+<h4><strong>Esperanza matemática</strong></h4>
+<p class="formula-texto"><strong>E(X) = n.p</strong></p>
+<h4><strong>Varianza</strong></h4>
+<p class="formula-texto"><strong>Var(X) = n.p.(1 – p)</strong></p>
+<h4><strong>Desviación estándar</strong></h4>
+<p class="formula-texto"><strong>σ = √[np(1 – p)]</strong></p>
+<h4><strong>Ejemplo resuelto</strong></h4>
+<p>Se lanza una moneda cinco veces. ¿Cuál es la probabilidad de obtener exactamente tres caras?</p>
+<p>Datos:</p>
+<ul><li>n = 5</li><li>x = 3</li><li>p es la probabilidad de obtener cara al lanzar la moneda p = 0,5</li></ul>
+<p>P(X = 3) = C (5,3) · (0,5)³ · (0,5)²</p>
+<p>P(X = 3) = 10 · 0,125 · 0,25</p>
+<p>P(X = 3) = 0,3125</p>
+<h5><strong>Esperanza:</strong></h5>
+<p>E(X) = 5 · 0,5 = 2,5</p>
+<h5><strong>Varianza:</strong></h5>
+<p>Var(X) = 5 · 0,5 · 0,5 = 1,25</p>
+<h5><strong>Desviación estándar:</strong></h5>
+<p>σ = √1,25 = 1,118</p>
+<h3><strong>MODELO BINOMIAL NEGATIVO (DISTRIBUCIÓN DE PASCAL)</strong></h3>
+<h4><strong>Definición</strong></h4>
+<p>La distribución binomial negativa permite calcular la probabilidad de que el r-ésimo éxito ocurra exactamente en el ensayo x. En este modelo no se fija el número de ensayos, sino la cantidad de éxitos que se desea obtener.</p>
+<h4><strong>Condiciones</strong></h4>
+<ul><li>Los ensayos son independientes.</li><li>Solo existen dos resultados posibles.</li><li>La probabilidad de éxito permanece constante.</li><li>Se fija la cantidad de éxitos (r).</li></ul>
+<h4><strong>Función de probabilidad</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-07-1.png" alt="P(X = x) = combinatorio de x − 1 sobre r − 1, por p elevado a r, por (1 − p) elevado a x − r." style="width:288px" loading="lazy"></figure>
+<p>donde:</p>
+<ul><li>x: número total de ensayos.</li><li>r: número de éxitos deseados.</li><li>p: probabilidad de éxito.</li></ul>
+<h4><strong>Esperanza matemática</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-07-2.png" alt="E(X) = r / p." style="width:113px" loading="lazy"></figure>
+<h4><strong>Varianza</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-07-3.png" alt="Var(X) = r(1 − p) / p²." style="width:175px" loading="lazy"></figure>
+<h4><strong>Ejemplo resuelto</strong></h4>
+<p>La probabilidad de aprobar un examen es 0,80. ¿Cuál es la probabilidad de aprobar por segunda vez exactamente en el tercer intento?</p>
+<p>Datos:</p>
+<ul><li>r = 2</li><li>x = 3</li><li>p = 0,80</li></ul>
+<p>P(X = 3) = C(2,1) · (0,80)² · (0,20)</p>
+<p>P(X = 3) = 2 · 0,64 · 0,20</p>
+<p>P(X = 3) = 0,256</p>
+<h5><strong>Esperanza:</strong></h5>
+<p>E(X) = 2 / 0,80 = 2,5</p>
+<h5><strong>Varianza:</strong></h5>
+<p>Var(X) = 2 · 0,20 / (0,80)² = 0,625</p>
+<h3><strong>MODELO GEOMÉTRICO</strong></h3>
+<h4><strong>Definición</strong></h4>
+<p>La distribución geométrica es un caso particular de la distribución binomial negativa y permite calcular la probabilidad de que el primer éxito ocurra en un determinado ensayo.</p>
+<h4><strong>Condiciones</strong></h4>
+<ul><li>Los ensayos son independientes.</li><li>Existen dos resultados posibles.</li><li>La probabilidad de éxito permanece constante.</li></ul>
+<h4><strong>Función de probabilidad</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-08-1.png" alt="P(X = x) = (1 − p) elevado a x − 1, por p." style="width:217px" loading="lazy"></figure>
+<h4><strong>Esperanza matemática</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-08-2.png" alt="E(X) = 1 / p." style="width:115px" loading="lazy"></figure>
+<h4><strong>Varianza</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-08-3.png" alt="Var(X) = (1 − p) / p²." style="width:149px" loading="lazy"></figure>
+<h4><strong>Ejemplo resuelto</strong></h4>
+<p>La probabilidad de acertar un tiro libre es 0,40. ¿Cuál es la probabilidad de acertar por primera vez en el tercer lanzamiento?</p>
+<p>Datos:</p>
+<ul><li>p = 0,40</li><li>x = 3</li></ul>
+<p>P(X = 3) = (0,60)² · 0,40</p>
+<p>P(X = 3) = 0,144</p>
+<h5><strong>Esperanza:</strong></h5>
+<p>E(X) = 1 / 0,40 = 2,5</p>
+<h5><strong>Varianza:</strong></h5>
+<p>Var(X) = 0,60 / (0,40)² = 3,75</p>
+<h3><strong>MODELO DE POISSON</strong></h3>
+<h4><strong>Definición</strong></h4>
+<p>La distribución de Poisson es un modelo de probabilidad discreto que permite calcular la probabilidad de que un determinado número de eventos ocurra en un intervalo de tiempo, espacio o longitud, cuando dichos eventos suceden de manera independiente y con una tasa promedio constante.</p>
+<h4><strong>Condiciones</strong></h4>
+<ul><li>Los eventos ocurren de forma independiente.</li><li>La tasa promedio de ocurrencia es constante.</li><li>Se estudia un intervalo fijo de tiempo, espacio o longitud.</li></ul>
+<h4><strong>Función de probabilidad</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-09-1.png" alt="P(X = x) = e elevado a −λ por λ elevado a x, dividido por x factorial." style="width:167px" loading="lazy"></figure>
+<p>donde:</p>
+<ul><li>λ: número promedio de ocurrencias.</li><li>x: número de eventos.</li></ul>
+<h4><strong>Esperanza matemática</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-09-2.png" alt="E(X) = λ." style="width:102px" loading="lazy"></figure>
+<h4><strong>Varianza</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-3/u3-09-3.png" alt="Var(X) = λ." style="width:113px" loading="lazy"></figure>
+<h4><strong>Ejemplo resuelto</strong></h4>
+<p>Una central telefónica recibe, en promedio, 4 llamadas por minuto. ¿Cuál es la probabilidad de recibir exactamente 2 llamadas en un minuto?</p>
+<p>Datos:</p>
+<ul><li>λ = 4</li><li>x = 2</li></ul>
+<p>P(X = 2) = (e^(-4) · 4²) / 2!</p>
+<p>P(X = 2) = (0,0183 · 16) / 2</p>
+<p>P(X = 2) = 0,1465</p>
+<h5>Esperanza:</h5>
+<p>E(X) = 4</p>
+<h5>Varianza:</h5>
+<p>Var(X) = 4</p>
+<h5>Desviación estándar:</h5>
+<p>σ = √4 = 2</p>
+<h3><strong>Resumen</strong></h3>
+<div class="tabla"><table><caption>Resumen de los modelos discretos</caption><thead><tr><th scope="col">Distribución</th><th scope="col">¿Qué modela?</th><th scope="col">Esperanza</th><th scope="col">Varianza</th></tr></thead><tbody><tr><th scope="row">Binomial</th><td>Número de éxitos en n ensayos.</td><td>E(X) = np</td><td>Var(X) = np(1 − p)</td></tr><tr><th scope="row">Binomial negativa (Pascal)</th><td>Número de ensayos necesarios para obtener r éxitos.</td><td>E(X) = r/p</td><td>Var(X) = r(1 − p)/p²</td></tr><tr><th scope="row">Geométrica</th><td>Número de ensayos hasta obtener el primer éxito.</td><td>E(X) = 1/p</td><td>Var(X) = (1 − p)/p²</td></tr><tr><th scope="row">Poisson</th><td>Número de eventos que ocurren en un intervalo fijo.</td><td>E(X) = λ</td><td>Var(X) = λ</td></tr></tbody></table></div>

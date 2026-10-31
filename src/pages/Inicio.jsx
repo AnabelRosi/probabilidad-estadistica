@@ -4,7 +4,7 @@ import { Box, Button, Card, CardActionArea, Chip, Grid, Stack, Typography } from
 import { alpha } from '@mui/material/styles'
 import ArrowForwardRounded from '@mui/icons-material/ArrowForwardRounded'
 import { TIPOS, UNIDADES } from '../data/materiales.js'
-import { ESTILO_COMPLEMENTARIO, ESTILO_UNIDAD, ICONO_TIPO } from '../identidad.js'
+import { ESTILO_UNIDAD, ICONO_TIPO } from '../identidad.js'
 import { COLORES } from '../theme.js'
 
 const DESCRIPCION_TIPO = {
@@ -111,15 +111,6 @@ function Hero() {
               endIcon={<ArrowForwardRounded />}
             >
               Empezar por la Unidad 1
-            </Button>
-            <Button
-              component={RouterLink}
-              to="/complementario"
-              variant="outlined"
-              size="large"
-              sx={{ color: '#fff', borderColor: alpha('#fff', 0.5), '&:hover': { borderColor: '#fff', bgcolor: alpha('#fff', 0.08) } }}
-            >
-              Material complementario
             </Button>
           </Stack>
         </Grid>
@@ -277,45 +268,6 @@ export default function Inicio() {
           })}
         </Grid>
       </Box>
-
-      <Card
-        component="section"
-        aria-labelledby="titulo-complementario"
-        variant="outlined"
-        sx={{ borderColor: alpha(COLORES.azul, 0.15), background: `linear-gradient(135deg, #fff 0%, ${ESTILO_COMPLEMENTARIO.suave} 100%)` }}
-      >
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          spacing={3}
-          alignItems={{ xs: 'flex-start', sm: 'center' }}
-          sx={{ p: { xs: 3, md: 4 } }}
-        >
-          <Box
-            aria-hidden
-            sx={{
-              flexShrink: 0,
-              width: 56,
-              height: 56,
-              borderRadius: '16px',
-              display: 'grid',
-              placeItems: 'center',
-              bgcolor: ESTILO_COMPLEMENTARIO.principal,
-              color: ESTILO_COMPLEMENTARIO.contraste,
-            }}
-          >
-            <ESTILO_COMPLEMENTARIO.Icono sx={{ fontSize: 30 }} />
-          </Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography id="titulo-complementario" variant="h3" component="h2" sx={{ mb: 0.5 }}>
-              Material complementario
-            </Typography>
-            <Typography color="text.secondary">Programa de la materia y tablas de consulta.</Typography>
-          </Box>
-          <Button component={RouterLink} to="/complementario" variant="contained" endIcon={<ArrowForwardRounded />}>
-            Ver sección
-          </Button>
-        </Stack>
-      </Card>
     </Box>
   )
 }

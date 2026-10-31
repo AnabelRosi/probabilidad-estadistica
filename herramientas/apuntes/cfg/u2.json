@@ -1,0 +1,430 @@
+{
+ "omitir": [
+  "UNIDAD Nº 2",
+  "PROBABILIDAD"
+ ],
+ "titulos": [
+  [
+   "EXPERIMENTOS ALEATORIOS",
+   1
+  ],
+  [
+   "ESPACIO MUESTRAL",
+   1
+  ],
+  [
+   "SUCESOS O EVENTOS",
+   1
+  ],
+  [
+   "DEFINICIÓN CLÁSICA DE PROBABILIDAD",
+   1
+  ],
+  [
+   "ALGUNAS REGLAS DE PROBABILIDAD",
+   1
+  ],
+  [
+   "Probabilidad conjunta",
+   1
+  ],
+  [
+   "Probabilidad Condicional",
+   1
+  ],
+  [
+   "Eventos independientes",
+   1
+  ],
+  [
+   "Teorema de la probabilidad total",
+   1
+  ],
+  [
+   "Teorema de Bayes",
+   1
+  ],
+  [
+   "Más ejemplos:",
+   2
+  ],
+  [
+   "Ejemplo:",
+   2
+  ],
+  [
+   "Solución:",
+   2
+  ]
+ ],
+ "alt": {
+  "img-01-1.png": "Recorte de noticia: Alertan por vientos fuertes y probabilidad de Zonda en la cordillera. Desde el Ministerio de Turismo recomendaron a los que están paseando por nuestra provincia consultar antes de ir a la zona de Alta Montaña.",
+  "img-01-2.png": "Logo de Tele Kino, un juego de azar.",
+  "img-01-3.png": "Imagen de un boleto y bolillas de la lotería Powerball.",
+  "img-01-4.png": "Infografía: 30 % de los adultos mayores de 74 años han perdido todos sus dientes naturales.",
+  "img-02-1.png": "Experimento ε: lanzamiento de un dado legal. Espacio muestral S = {1, 2, 3, 4, 5, 6}. E1: obtener un número par, E1 = {2, 4, 6}. E2: obtener un número impar, E2 = complemento de E1 = {1, 3, 5}. Estos eventos son mutuamente excluyentes, pues la intersección de E1 y E2 es el conjunto vacío.",
+  "img-03-1.png": "Dibujo de un dado.",
+  "img-04-1.png": "Dibujo de un trabajador palando nieve.",
+  "img-08-1.png": "P(D) = P(D/M1) por P(M1) + … + P(D/Mn) por P(Mn).",
+  "img-08-2.png": "Esquema: el espacio muestral dividido en las partes M1, M2, …, Mn, con un evento D que ocupa parte de varias de ellas.",
+  "img-09-1.png": "Diagrama: los clientes se dividen en L (látex) y S (semiesmaltada); el círculo R (rodillo) ocupa parte de ambos.",
+  "img-09-2.png": "Teorema de Bayes: P(Mk/D) = P(D/Mk) por P(Mk), dividido por la suma P(D/M1) por P(M1) + … + P(D/Mn) por P(Mn).",
+  "img-09-3.png": "Esquema: el espacio muestral dividido en las partes M1, M2, …, Mn, con un evento D que ocupa parte de varias de ellas."
+ },
+ "recortes": [
+  {
+   "pagina": 1,
+   "id": "powerball",
+   "caja": [
+    230,
+    414,
+    335,
+    516
+   ],
+   "html": "<div class=\"recuadro\"><p>¡La lotería Powerball tiene un premio de 81 millones de dólares, y las probabilidades de acertarla son mayores que en el Quini6!</p></div>"
+  },
+  {
+   "pagina": 2,
+   "id": "complementario",
+   "caja": [
+    80,
+    376,
+    515,
+    482
+   ],
+   "html": "<ul><li><strong>Evento complementario:</strong> es el conjunto de todos los resultados del espacio muestral que no se encuentran en E. Lo simbolizaremos <span style=\"text-decoration:overline\">E</span>.</li><li><strong>Eventos mutuamente excluyentes:</strong> son aquellos cuya intersección es nula (vacía). Es decir, que no tienen elementos en común. La ocurrencia de cualquiera de ellos excluye la posibilidad de que ocurra otro cualquiera.</li></ul>"
+  },
+  {
+   "pagina": 3,
+   "id": "cfcp",
+   "caja": [
+    85,
+    535,
+    300,
+    563
+   ],
+   "html": "<p class=\"formula-texto\">P(E) = #CF / #CP &nbsp;&nbsp;&nbsp; 0 ≤ P(E) ≤ 1</p>"
+  },
+  {
+   "pagina": 3,
+   "id": "dado",
+   "caja": [
+    255,
+    628,
+    390,
+    662
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub>) = 3/6 = 0,5 ⇒ 50 %</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "regla1",
+   "caja": [
+    85,
+    122,
+    515,
+    170
+   ],
+   "html": "<p><u>Regla 1</u>: Si P(E) representa la probabilidad de que ocurra un evento E, la probabilidad de que no ocurra, denotada por P(<span style=\"text-decoration:overline\">E</span>), será:</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "f1",
+   "caja": [
+    85,
+    172,
+    300,
+    198
+   ],
+   "html": "<p class=\"formula-texto\">P(E) = 1 − P(<span style=\"text-decoration:overline\">E</span>)</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "regla2",
+   "caja": [
+    85,
+    200,
+    515,
+    238
+   ],
+   "html": "<p><u>Regla 2</u>: Si los eventos E<sub>1</sub> y E<sub>2</sub> son mutuamente excluyentes (es decir que no pueden ocurrir los dos a la vez), la probabilidad de que ocurra E<sub>1</sub> o E<sub>2</sub> es:</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "f2",
+   "caja": [
+    85,
+    250,
+    330,
+    276
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub> ∪ E<sub>2</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>)</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "gen",
+   "caja": [
+    85,
+    285,
+    515,
+    326
+   ],
+   "html": "<p>Generalizando, sean n eventos mutuamente excluyentes E<sub>1</sub>, E<sub>2</sub>, …, E<sub>n</sub>, la probabilidad de que ocurran E<sub>1</sub>, E<sub>2</sub>, … o E<sub>n</sub> es</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "f3",
+   "caja": [
+    85,
+    334,
+    330,
+    360
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub> ∪ E<sub>2</sub> ∪ … ∪ E<sub>n</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) + … + P(E<sub>n</sub>)</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "regla3",
+   "caja": [
+    85,
+    365,
+    515,
+    400
+   ],
+   "html": "<p><u>Regla 3</u>: Si los eventos E<sub>1</sub> y E<sub>2</sub> no son mutuamente excluyentes (es decir que pueden ocurrir los dos a la vez), la probabilidad de la ocurrencia de los eventos E<sub>1</sub> o E<sub>2</sub> es</p>"
+  },
+  {
+   "pagina": 4,
+   "id": "f4",
+   "caja": [
+    85,
+    430,
+    330,
+    456
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub> ∪ E<sub>2</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) − P(E<sub>1</sub> ∩ E<sub>2</sub>)</p>"
+  },
+  {
+   "pagina": 5,
+   "id": "conjunta",
+   "caja": [
+    240,
+    360,
+    345,
+    392
+   ],
+   "html": "<p class=\"formula-texto\">P(A ∩ B) = #(A ∩ B) / n</p>"
+  },
+  {
+   "pagina": 5,
+   "id": "siendo",
+   "caja": [
+    85,
+    415,
+    300,
+    450
+   ],
+   "html": "<p>Siendo: # = Cantidad de veces<br>n = Cantidad de eventos</p>"
+  },
+  {
+   "pagina": 6,
+   "id": "eventos",
+   "caja": [
+    115,
+    176,
+    260,
+    256
+   ],
+   "html": "<ul><li>G: Personal gerencial</li><li>G&#773;: Personal no gerencial</li><li>U: Empleado universitario</li><li>U&#773;: Empleado no universitario</li></ul>"
+  },
+  {
+   "pagina": 6,
+   "id": "a",
+   "caja": [
+    100,
+    334,
+    300,
+    360
+   ],
+   "html": "<p>a) P(G ∩ U) = 25/300 = 0,083</p>"
+  },
+  {
+   "pagina": 6,
+   "id": "b",
+   "caja": [
+    100,
+    400,
+    300,
+    425
+   ],
+   "html": "<p>b) P(G&#773; ∩ U&#773;) = 195/300 = 0,65</p>"
+  },
+  {
+   "pagina": 6,
+   "id": "c",
+   "caja": [
+    100,
+    466,
+    300,
+    491
+   ],
+   "html": "<p>c) P(G ∩ U&#773;) = 5/300 = 0,017</p>"
+  },
+  {
+   "pagina": 7,
+   "id": "condicional",
+   "caja": [
+    245,
+    70,
+    352,
+    102
+   ],
+   "alt": "P(A/B) = P(A ∩ B) dividido por P(B)."
+  },
+  {
+   "pagina": 7,
+   "id": "gdadou",
+   "caja": [
+    188,
+    322,
+    410,
+    380
+   ],
+   "alt": "P(G/U) = P(G ∩ U) dividido por P(U) = (25/300) dividido por (100/300) = 0,083 dividido por (1/3) = 0,25."
+  },
+  {
+   "pagina": 7,
+   "id": "udadog",
+   "caja": [
+    188,
+    436,
+    410,
+    490
+   ],
+   "alt": "P(U/G) = P(U ∩ G) dividido por P(G) = (25/300) dividido por (30/300) = 0,083 dividido por (1/10) = 0,83."
+  },
+  {
+   "pagina": 8,
+   "id": "r4",
+   "caja": [
+    85,
+    178,
+    300,
+    196
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub> ∩ E<sub>2</sub>) = P(E<sub>1</sub>) · P(E<sub>2</sub>)</p>"
+  },
+  {
+   "pagina": 8,
+   "id": "r4n",
+   "caja": [
+    85,
+    378,
+    330,
+    396
+   ],
+   "html": "<p class=\"formula-texto\">P(E<sub>1</sub> ∩ E<sub>2</sub> ∩ … ∩ E<sub>n</sub>) = P(E<sub>1</sub>) · P(E<sub>2</sub>) · … · P(E<sub>n</sub>)</p>"
+  },
+  {
+   "pagina": 9,
+   "id": "pr",
+   "caja": [
+    85,
+    250,
+    300,
+    264
+   ],
+   "html": "<p>P(R) = P(L ∩ R) ∪ P(S ∩ R) =</p>"
+  },
+  {
+   "pagina": 10,
+   "id": "bayes",
+   "caja": [
+    85,
+    186,
+    310,
+    212
+   ],
+   "alt": "P(L/R) = P(R/L) por P(L) dividido por P(R) = 0,60 por 0,75 dividido por 0,525 = 0,455 dividido por 0,525 = 0,85714."
+  }
+ ],
+ "tablas": [
+  {
+   "pagina": 3,
+   "caja": [
+    85,
+    118,
+    520,
+    285
+   ],
+   "cols": [
+    226,
+    368
+   ],
+   "filas": [
+    118,
+    150,
+    205,
+    285
+   ],
+   "encabezado": 1,
+   "leyenda": "Ejemplos de experimento aleatorio, espacio muestral y suceso"
+  },
+  {
+   "pagina": 4,
+   "caja": [
+    85,
+    628,
+    215,
+    725
+   ],
+   "cols": [
+    150
+   ],
+   "filas": [
+    628,
+    655,
+    667,
+    681,
+    695,
+    709,
+    725
+   ],
+   "encabezado": 1,
+   "leyenda": "Probabilidad del número de grandes nevadas"
+  },
+  {
+   "pagina": 5,
+   "caja": [
+    105,
+    575,
+    480,
+    690
+   ],
+   "cols": [
+    206,
+    298,
+    407
+   ],
+   "filas": [
+    575,
+    615,
+    636,
+    658,
+    690
+   ],
+   "encabezado": 1,
+   "primeraColumnaTh": true,
+   "leyenda": "Empleados según cargo y estudios"
+  }
+ ],
+ "reemplazos": [
+  [
+   "Estudios Cargos",
+   "Cargos / Estudios"
+  ]
+ ],
+ "nuevoParrafo": [
+  "Todo el mundo ha hecho"
+ ]
+}

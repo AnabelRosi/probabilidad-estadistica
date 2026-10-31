@@ -1,0 +1,87 @@
+<h3>Variable aleatoria continua</h3>
+<p>Definición: X es una variable aleatoria CONTINUA si X(Ω) es un conjunto infinito no numerable. (escala continua).</p>
+<p>Ejemplo: estatura de los estudiantes de lógica.</p>
+<h3>Funcion densidad de una V. A. continua</h3>
+<p>Sea (Ω; P) un espacio de probabilidad y X una variable aleatoria continua definida en Ω.</p>
+<p>Se llama función de densidad de la variable aleatoria X a la función:</p>
+<figure class="formula"><img src="materiales/contenido/unidad-4/u4-01-2.png" alt="La función de densidad f de x va de los reales a los reales: a cada x le corresponde f(x)." style="width:159px" loading="lazy"></figure>
+<p>Para que f(x) sea una función de densidad debe cumplir las siguientes condiciones.</p>
+<figure class="formula"><img src="materiales/contenido/unidad-4/u4-01-3.png" alt="Condiciones de una función de densidad: 1. f(x) es mayor o igual que 0 para todo x. 2. La integral de f(x) dx desde menos infinito hasta infinito es igual a 1: el área bajo toda la gráfica de f(x) es 1." style="width:532px" loading="lazy"></figure>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-01-1.png" alt="Gráfico de una curva de densidad con el área sombreada entre a y b, que representa la probabilidad P(a &lt; X &lt; b)." style="width:265px" loading="lazy"></figure>
+<p>P(a &lt; X &lt; b) = P(a ≤ X ≤ b)</p>
+<h3>Funcion de distribución acumulada</h3>
+<p>Sea (Ω; P) un espacio de probabilidad y X una variable aleatoria continua definida en Ω. Se llama función de distribución de la variable aleatoria X a la función:</p>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-02-1.png" alt="La función de distribución F de x va de los reales a los reales: a cada x le corresponde F(x). F(x) = P(X ≤ x) = integral de f(t) dt desde menos infinito hasta x." style="width:291px" loading="lazy"></figure>
+<h4><strong>REGLA GENERAL</strong></h4>
+<figure class="formula"><img src="materiales/contenido/unidad-4/u4-f02-integral.png" alt="P(a &lt; X &lt; b) = P(a ≤ X ≤ b) = integral de a hasta b de f(x) dx = F(b) − F(a)." style="width:369px"></figure>
+<h4><strong>Ejemplo:</strong></h4>
+<p>La variable aleatoria continua <strong>X </strong>tiene la siguiente función de densidad:</p>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-02-2.png" alt="Función de densidad por tramos: f(x) = x/8 si 0 ≤ x &lt; 2; 1/4 si 2 ≤ x &lt; 4; (6 − x)/8 si 4 ≤ x ≤ 6; 0 en otro caso." style="width:278px" loading="lazy"></figure>
+<p>Además, se conoce que su función de distribución acumulada es:</p>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-02-3.png" alt="Función de distribución acumulada por tramos: F(x) = 0 si x &lt; 0; x²/16 si 0 ≤ x &lt; 2; x/4 − 1/4 si 2 ≤ x &lt; 4; 1 − (6 − x)²/16 si 4 ≤ x ≤ 6; 1 si x &gt; 6." style="width:319px" loading="lazy"></figure>
+<h4>Calcular:</h4>
+<p>a) P(X ≤ 1)</p>
+<p>P(X≤1) = F(1) = 1²/16 = 0,0625</p>
+<p>b) P(1 &lt; X ≤ 3)</p>
+<p>P(1&lt;X≤3) = F(3) - F(1) = (3/4−1/4)−1/16 = 0,50−0,0625 = 0,4375</p>
+<p>c) P(2 ≤ X &lt; 5)</p>
+<p>P(2≤X&lt;5) = F(5)-F(2) =</p>
+<p>F(5) =1−(6−5)²/16 =1−1/16 =15/16 = 0,9375</p>
+<p>F(2)=2/4−1/4 = 0,25</p>
+<p>P(2≤X&lt;5) = 0,9375−0,25 = <strong>0,6875</strong></p>
+<p>d) P(X &gt; 4)</p>
+<p>P(X&gt;4) = 1−F(4)</p>
+<p>F(4)=1−(6−4)²/16 = 1−4/16 =0,75</p>
+<p>P(X&gt;4) =1−0,75= <strong>0,25</strong></p>
+<p>e) P(3 &lt; X &lt; 6)</p>
+<p>P(3&lt;X&lt;6) = F(6)-F(3) =1−0,50 = <strong>0,50</strong></p>
+<p>f) P(X = 2)</p>
+<p>P(X=2) = <strong>0</strong></p>
+<p>(Al tratarse de una variable aleatoria continua, la probabilidad de un valor puntual es siempre cero).</p>
+<p>g) P(X ≥ 6)</p>
+<p>P(X≥6) =1−F(6) + P(X=6) =1−1+0 = <strong>0</strong></p>
+<h3><strong>MODELO NORMAL</strong></h3>
+<h4><strong>Definición</strong></h4>
+<p>La <strong>distribución normal</strong>, también conocida como <strong>distribución de Gauss</strong>, es un modelo de probabilidad continua ampliamente utilizado para representar fenómenos cuyos valores tienden a concentrarse alrededor de un valor central. Se caracteriza por su forma de campana, siendo simétrica respecto de la media.</p>
+<p>Este modelo se emplea para describir numerosas variables reales, como la estatura, el peso, las calificaciones de un examen, los errores de medición, los tiempos de respuesta de un sistema y otros fenómenos naturales y sociales.</p>
+<p>La distribución normal queda completamente determinada por dos parámetros:</p>
+<ul><li>μ (mu): media o promedio de la distribución.</li><li>σ (sigma): desviación estándar, que mide la dispersión de los datos respecto de la media.</li></ul>
+<h4><strong>Función de densidad</strong></h4>
+<p>La función de densidad de una variable aleatoria normal está dada por:</p>
+<figure class="formula"><img src="materiales/contenido/unidad-4/u4-04-1.png" alt="Función de densidad normal: f(x; μ, σ) = 1 / (√(2π) σ) por e elevado a menos (x − μ)² / (2σ²), para x entre menos infinito y más infinito." style="width:258px" loading="lazy"></figure>
+<p>donde:</p>
+<ul><li>μ: media.</li><li>σ: desviación estándar.</li><li>π: constante igual a 3,1416.</li><li>e: número de Euler (2,71828).</li></ul>
+<h4><strong>Características de la distribución normal</strong></h4>
+<ul><li>Es una distribución continua.</li><li>Tiene forma de campana y es simétrica respecto de la media.</li><li>La media, la mediana y la moda coinciden.</li><li>El área total bajo la curva es igual a 1.</li><li>Las probabilidades se representan mediante áreas bajo la curva.</li><li>La probabilidad de que una variable tome un valor exacto es igual a cero.</li></ul>
+<h4><strong>Distribución normal estándar</strong></h4>
+<p>Para calcular probabilidades se transforma la variable original en una <strong>variable normal estándar</strong>, cuya media es 0 y su desviación estándar es 1.</p>
+<p>La transformación se realiza mediante la siguiente expresión:</p>
+<p class="formula-texto"><strong>Z = (X − μ) / σ</strong></p>
+<p>donde:</p>
+<ul><li>X: valor observado.</li><li>μ: media.</li><li>σ: desviación estándar.</li></ul>
+<p>El valor obtenido se denomina <strong>valor Z </strong>y permite utilizar la tabla de la distribución normal estándar para determinar probabilidades.</p>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-05-1.png" alt="Esquema de tipificación: una variable X con distribución normal de media μ y desvío σ se transforma en Z = (x − μ) / σ, con distribución normal estándar N(0,1); la inversa es x = μ + z · σ." style="width:294px" loading="lazy"></figure>
+<h4><strong>Regla empírica</strong></h4>
+<p>En una distribución normal:</p>
+<ul><li>Aproximadamente el <strong>68 % </strong>de los datos se encuentra entre μ − σ y μ + σ.</li><li>Aproximadamente el <strong>95 % </strong>de los datos se encuentra entre μ − 2σ y μ + 2σ.</li><li>Aproximadamente el <strong>99,7 % </strong>de los datos se encuentra entre μ − 3σ y μ + 3σ.</li></ul>
+<figure class="figura"><img src="materiales/contenido/unidad-4/u4-05-2.png" alt="Curva normal con el eje marcado en μ − 3σ, μ − σ, μ + σ y μ + 3σ." style="width:213px" loading="lazy"></figure>
+<h4><strong>Ejemplo resuelto</strong></h4>
+<p>Las calificaciones obtenidas por los estudiantes en un examen siguen una distribución normal con media <strong>μ = 70 </strong>puntos y desviación estándar <strong>σ = 10 </strong>puntos.</p>
+<p>Calcular la probabilidad de que un estudiante seleccionado al azar obtenga una calificación <strong>menor que 85 puntos.</strong></p>
+<h5><strong>Paso 1. Tipificar la variable</strong></h5>
+<p>Se aplica la fórmula:</p>
+<p class="formula-texto"><strong>Z = (X − μ) / σ</strong></p>
+<p>Reemplazando los datos:</p>
+<p class="formula-texto"><strong>Z = (85 − 70) / 10</strong></p>
+<p class="formula-texto"><strong>Z = 15 / 10</strong></p>
+<p class="formula-texto"><strong>Z = 1,50</strong></p>
+<h5><strong>Paso 2. Buscar el valor en la tabla de la distribución normal estándar</strong></h5>
+<p>Para <strong>Z = 1,50</strong>, la tabla proporciona:</p>
+<p class="formula-texto"><strong>P(Z &lt; 1,50) = 0,9332</strong></p>
+<h5><strong>Paso 3. Respuesta</strong></h5>
+<p>La probabilidad de que un estudiante obtenga una calificación inferior a 85 puntos es:</p>
+<p class="formula-texto"><strong>P(X &lt; 85) = 0,9332</strong></p>
+<p>o expresado en porcentaje:</p>
+<p class="formula-texto"><strong>P(X &lt; 85) = 93,32 %</strong></p>
+<h4><strong>Interpretación</strong></h4>
+<p>Existe una probabilidad del <strong>93,32 % </strong>de que un estudiante elegido al azar obtenga una calificación inferior a 85 puntos. Este resultado se obtiene utilizando la distribución normal estándar y la tabla de valores Z.</p>

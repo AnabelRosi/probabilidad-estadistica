@@ -5,7 +5,6 @@
 // Los 16 archivos están en public/materiales/unidad-N/: 12 son copias idénticas de materiales-originales/ con su
 // nombre real; las 4 infografías se publican en su versión corregida (*_corregida.png, ver infografias-corregidas/CAMBIOS.md).
 // Solo "disponible" con "archivo" muestra acciones: Ver (PDF, PNG) y Descargar (todos los formatos).
-// Los materiales que todavía no se recibieron (F01-F06) quedan en material-faltante, sin archivo.
 // Los demás estados se conservan para materiales futuros que requieran revisión antes de publicarse.
 
 export const ESTADOS = {
@@ -39,10 +38,7 @@ export const AUTORIA = {
   desconocida: 'desconocida',
 }
 
-export const etiquetaEstado = (material) =>
-  material.estado === ESTADOS.materialFaltante && material.tipo === 'tp'
-    ? 'Consigna pendiente de recibir'
-    : ETIQUETAS_ESTADO[material.estado]
+export const etiquetaEstado = (material) => ETIQUETAS_ESTADO[material.estado]
 
 export const TIPOS = [
   { id: 'teoria', titulo: 'Teoría' },
@@ -52,7 +48,6 @@ export const TIPOS = [
 ]
 
 // Nombres y temas tomados de los apuntes de cada unidad.
-// Pendiente: confirmarlos con el programa oficial de la materia.
 export const UNIDADES = [
   {
     numero: 1,
@@ -111,23 +106,17 @@ export const UNIDADES = [
 
 // Datos comunes
 const DECLARADA = 'Declarada por la autora del proyecto'
-const NO_RECIBIDO = 'Material no recibido'
-const REQ_CONSIGNA = ['Recibir la consigna original sin resolver', 'Copiar el archivo a public/materiales/']
 
 // Material publicado: copia idéntica del original, con su nombre real.
+// Los PPTX y DOCX se publican con su versión PDF (mismo nombre, extensión .pdf) para poder verlos en el navegador;
+// la descarga sigue siendo el archivo original.
 const publicado = (inventario, unidad, tipo, titulo, formato, nombre) => ({
   inventario, unidad, tipo, titulo, formato,
   archivo: `materiales/unidad-${unidad}/${nombre}`,
+  vista: ['PPTX', 'DOCX'].includes(formato) ? `materiales/unidad-${unidad}/${nombre.replace(/\.(pptx|docx)$/i, '.pdf')}` : null,
   estado: ESTADOS.disponible,
   autoria: AUTORIA.declarada, autoriaDetalle: DECLARADA,
   requisitos: [],
-})
-
-const consignaFaltante = (inventario, unidad) => ({
-  inventario, unidad, tipo: 'tp', titulo: `Trabajo práctico Nº ${unidad}: consigna`, formato: null,
-  archivo: null, estado: ESTADOS.materialFaltante,
-  autoria: AUTORIA.desconocida, autoriaDetalle: NO_RECIBIDO,
-  requisitos: REQ_CONSIGNA,
 })
 
 export const MATERIALES = [
@@ -136,43 +125,24 @@ export const MATERIALES = [
   publicado('02', 1, 'presentacion', 'Presentación: Estadística descriptiva', 'PPTX', 'Unidad1_Estadistica_Descriptiva_naranja.pptx'),
   publicado('04', 1, 'infografia', 'Infografía: Fundamentos de la estadística descriptiva', 'PNG', 'Fundamentos_de_la_estadística_descriptiva_corregida.png'),
   publicado('03', 1, 'tp', 'Trabajo práctico Nº 1 (resuelto)', 'DOCX', 'TPN°1.docx'),
-  consignaFaltante('F01', 1),
 
   // Unidad 2
   publicado('05', 2, 'teoria', 'Apunte: Probabilidad', 'PDF', 'UNIDAD Nº 2. Probabilidad.pdf'),
   publicado('06', 2, 'presentacion', 'Presentación: Probabilidad', 'PPTX', 'Unidad2_Probabilidad_rosa.pptx'),
   publicado('08', 2, 'infografia', 'Infografía: Fundamentos de la probabilidad', 'PNG', 'Guía_de_fundamentos_de_probabilidad_corregida.png'),
   publicado('07', 2, 'tp', 'Trabajo práctico Nº 2 (resuelto)', 'DOCX', 'TPN°2.docx'),
-  consignaFaltante('F02', 2),
 
   // Unidad 3
   publicado('09', 3, 'teoria', 'Apunte: Variable aleatoria discreta', 'PDF', 'UNIDAD Nº 3. VARIABLE ALEATORIA DISCRETA (1).pdf'),
   publicado('10', 3, 'presentacion', 'Presentación: Variables aleatorias discretas', 'PPTX', 'Unidad3_Variables_Aleatorias_Discretas.pptx'),
   publicado('12', 3, 'infografia', 'Infografía: Variable aleatoria discreta y modelos', 'PNG', 'Guía_de_variable_aleatoria_discreta_corregida.png'),
   publicado('11', 3, 'tp', 'Trabajo práctico Nº 3 (resuelto)', 'DOCX', 'TPN_3_verde.docx'),
-  consignaFaltante('F03', 3),
 
   // Unidad 4
   publicado('13', 4, 'teoria', 'Apunte: Variable aleatoria continua', 'PDF', 'UNIDAD Nº 4. VARIABLE ALETROIA CONTINUA.pdf'),
   publicado('14', 4, 'presentacion', 'Presentación: Variable aleatoria continua', 'PPTX', 'Unidad4_Variable_Aleatoria_Continua.pptx'),
   publicado('16', 4, 'infografia', 'Infografía: Variables continuas y distribución normal', 'PNG', 'Guía_de_distribución_normal_continua_corregida.png'),
   publicado('15', 4, 'tp', 'Trabajo práctico Nº 4 (resuelto)', 'DOCX', 'TPN°4.docx'),
-  consignaFaltante('F04', 4),
-]
-
-export const COMPLEMENTARIO = [
-  {
-    inventario: 'F05', id: 'programa', titulo: 'Programa de la materia', formato: null,
-    archivo: null, estado: ESTADOS.materialFaltante,
-    autoria: AUTORIA.desconocida, autoriaDetalle: NO_RECIBIDO,
-    requisitos: ['Recibir el programa oficial', 'Copiar el archivo a public/materiales/'],
-  },
-  {
-    inventario: 'F06', id: 'tabla-normal', titulo: 'Tabla de la distribución normal estándar', formato: null,
-    archivo: null, estado: ESTADOS.materialFaltante,
-    autoria: AUTORIA.desconocida, autoriaDetalle: NO_RECIBIDO,
-    requisitos: ['Conseguir la tabla y confirmar su origen', 'Copiar el archivo a public/materiales/'],
-  },
 ]
 
 // Formatos que el navegador puede mostrar directamente; el resto solo se descarga.

@@ -4,12 +4,14 @@ import { Box, Breadcrumbs, Button, Chip, Grid, Link, Stack, Typography } from '@
 import { alpha } from '@mui/material/styles'
 import ArrowBackRounded from '@mui/icons-material/ArrowBackRounded'
 import ArrowForwardRounded from '@mui/icons-material/ArrowForwardRounded'
+import DownloadRounded from '@mui/icons-material/DownloadRounded'
+import OpenInNewRounded from '@mui/icons-material/OpenInNewRounded'
 import MaterialCard from '../components/MaterialCard.jsx'
+import ContenidoApunte from '../components/ContenidoApunte.jsx'
 import Encabezado from '../components/Encabezado.jsx'
 import NoEncontrada from './NoEncontrada.jsx'
-import { TIPOS, UNIDADES, materialesDeUnidad } from '../data/materiales.js'
+import { UNIDADES, materialesDeUnidad, nombreArchivo, urlMaterial } from '../data/materiales.js'
 import { ESTILO_UNIDAD, ICONO_TIPO } from '../identidad.js'
-import { COLORES } from '../theme.js'
 
 function NavegacionUnidades({ numero }) {
   const anterior = UNIDADES.find((u) => u.numero === numero - 1)
@@ -44,11 +46,80 @@ function NavegacionUnidades({ numero }) {
           Unidad {siguiente.numero}: {siguiente.titulo}
         </Button>
       ) : (
-        <Button component={RouterLink} to="/complementario" variant="contained" endIcon={<ArrowForwardRounded />}>
-          Material complementario
+        <Button component={RouterLink} to="/" variant="contained" endIcon={<ArrowForwardRounded />}>
+          Volver al inicio
         </Button>
       )}
     </Box>
+  )
+}
+
+function Seccion({ id, Icono, titulo, estilo, children }) {
+  return (
+    <Box component="section" aria-labelledby={id} sx={{ mb: { xs: 5, md: 6 } }}>
+      <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2 }}>
+        <Box aria-hidden sx={{ display: 'grid', placeItems: 'center', color: estilo.oscuro }}>
+          <Icono />
+        </Box>
+        <Typography id={id} variant="h2">
+          {titulo}
+        </Typography>
+      </Stack>
+      {children}
+    </Box>
+  )
+}
+
+// 1. Infografía visible en la página, con acceso al tamaño completo y a la descarga
+function Infografia({ material, unidad, estilo }) {
+  const url = urlMaterial(material.archivo)
+  return (
+    <Box component="figure" sx={{ m: 0 }}>
+      <Box
+        component="img"
+        src={url}
+        alt={`Infografía de la Unidad ${unidad.numero}: ${unidad.titulo}`}
+        sx={{
+          display: 'block',
+          width: '100%',
+          maxWidth: 900,
+          height: 'auto',
+          mx: 'auto',
+          bgcolor: '#fff',
+          border: 2,
+          borderColor: alpha(estilo.principal, 0.7),
+          borderRadius: '20px',
+        }}
+      />
+      <Stack component="figcaption" direction="row" flexWrap="wrap" useFlexGap spacing={1.5} justifyContent="center" sx={{ mt: 2 }}>
+        <Button variant="contained" startIcon={<OpenInNewRounded />} href={url} target="_blank" rel="noopener noreferrer">
+          Ver en tamaño completo
+        </Button>
+        <Button variant="outlined" startIcon={<DownloadRounded />} href={url} download={nombreArchivo(material.archivo)}>
+          Descargar infografía
+        </Button>
+      </Stack>
+    </Box>
+  )
+}
+
+// 2. Información escrita: el texto del apunte dentro de la página y, al final, el botón para descargarlo
+function Informacion({ material, unidad, estilo }) {
+  const url = urlMaterial(material.archivo)
+  return (
+    <>
+      <Stack direction="row" flexWrap="wrap" useFlexGap spacing={1} sx={{ mb: 2 }}>
+        {unidad.temas.map((tema) => (
+          <Chip key={tema} label={tema} sx={{ bgcolor: estilo.suave, color: estilo.oscuro }} />
+        ))}
+      </Stack>
+      <ContenidoApunte numero={unidad.numero} titulo={unidad.titulo} estilo={estilo} />
+      <Stack direction="row" flexWrap="wrap" useFlexGap spacing={1.5} sx={{ mt: 3 }}>
+        <Button variant="contained" size="large" startIcon={<DownloadRounded />} href={url} download={nombreArchivo(material.archivo)}>
+          Descargar apunte (PDF)
+        </Button>
+      </Stack>
+    </>
   )
 }
 
@@ -64,6 +135,11 @@ export default function Unidad() {
 
   const estilo = ESTILO_UNIDAD[unidad.numero]
   const materiales = materialesDeUnidad(unidad.numero)
+  const de = (tipo) => materiales.find((m) => m.tipo === tipo)
+  const infografia = de('infografia')
+  const apunte = de('teoria')
+  const presentacion = de('presentacion')
+  const tp = de('tp')
 
   return (
     <Box>
@@ -78,49 +154,37 @@ export default function Unidad() {
 
       <Encabezado estilo={estilo} etiqueta={`Unidad ${unidad.numero}`} titulo={unidad.titulo} descripcion={unidad.resumen} />
 
-      <Box
-        component="section"
-        aria-labelledby="titulo-temas"
-        sx={{ mb: { xs: 4, md: 5 }, p: { xs: 2.5, sm: 3 }, borderRadius: '20px', bgcolor: estilo.suave }}
-      >
-        <Typography id="titulo-temas" variant="h3" component="h2" sx={{ mb: 2, color: COLORES.texto }}>
-          Temas de la unidad
-        </Typography>
-        <Stack direction="row" flexWrap="wrap" useFlexGap spacing={1}>
-          {unidad.temas.map((tema) => (
-            <Chip
-              key={tema}
-              label={tema}
-              sx={{ bgcolor: '#fff', color: estilo.oscuro, border: `1px solid ${alpha(estilo.principal, 0.4)}` }}
-            />
-          ))}
-        </Stack>
-      </Box>
+      {infografia && (
+        <Seccion id="titulo-infografia" Icono={ICONO_TIPO.infografia} titulo="Infografía" estilo={estilo}>
+          <Infografia material={infografia} unidad={unidad} estilo={estilo} />
+        </Seccion>
+      )}
 
-      {TIPOS.map((tipo) => {
-        const delTipo = materiales.filter((m) => m.tipo === tipo.id)
-        if (delTipo.length === 0) return null
-        const Icono = ICONO_TIPO[tipo.id]
-        return (
-          <Box component="section" key={tipo.id} aria-labelledby={`titulo-${tipo.id}`} sx={{ mb: { xs: 4, md: 5 } }}>
-            <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2 }}>
-              <Box aria-hidden sx={{ display: 'grid', placeItems: 'center', color: estilo.oscuro }}>
-                <Icono />
-              </Box>
-              <Typography id={`titulo-${tipo.id}`} variant="h2">
-                {tipo.titulo}
-              </Typography>
-            </Stack>
-            <Grid container spacing={2}>
-              {delTipo.map((m) => (
-                <Grid item xs={12} sm={6} md={4} key={m.titulo}>
-                  <MaterialCard material={m} Icono={Icono} estilo={estilo} />
-                </Grid>
-              ))}
+      {apunte && (
+        <Seccion id="titulo-informacion" Icono={ICONO_TIPO.teoria} titulo="Información de la unidad" estilo={estilo}>
+          <Informacion material={apunte} unidad={unidad} estilo={estilo} />
+        </Seccion>
+      )}
+
+      {presentacion && (
+        <Seccion id="titulo-presentacion" Icono={ICONO_TIPO.presentacion} titulo="Presentación" estilo={estilo}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <MaterialCard material={presentacion} Icono={ICONO_TIPO.presentacion} estilo={estilo} />
             </Grid>
-          </Box>
-        )
-      })}
+          </Grid>
+        </Seccion>
+      )}
+
+      {tp && (
+        <Seccion id="titulo-tp" Icono={ICONO_TIPO.tp} titulo="Trabajo práctico" estilo={estilo}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <MaterialCard material={tp} Icono={ICONO_TIPO.tp} estilo={estilo} />
+            </Grid>
+          </Grid>
+        </Seccion>
+      )}
 
       <NavegacionUnidades numero={unidad.numero} />
     </Box>

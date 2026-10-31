@@ -1,0 +1,123 @@
+<p>La probabilidad tiene un papel crucial en la aplicación de la inferencia estadística porque una decisión, cuyo fundamento se encuentra en la información contenida en una muestra aleatoria, puede estar equivocada. Sin una adecuada comprensión de las leyes básicas de la probabilidad, es difícil utilizar la metodología estadística de manera efectiva.</p>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-01-1.png" alt="Recorte de noticia: Alertan por vientos fuertes y probabilidad de Zonda en la cordillera. Desde el Ministerio de Turismo recomendaron a los que están paseando por nuestra provincia consultar antes de ir a la zona de Alta Montaña." style="width:424px" loading="lazy"></figure>
+<figure class="fila"><img src="materiales/contenido/unidad-2/u2-01-3.png" alt="Imagen de un boleto y bolillas de la lotería Powerball." style="width:169px" loading="lazy"><img src="materiales/contenido/unidad-2/u2-01-2.png" alt="Logo de Tele Kino, un juego de azar." style="width:122px" loading="lazy"><img src="materiales/contenido/unidad-2/u2-01-4.png" alt="Infografía: 30 % de los adultos mayores de 74 años han perdido todos sus dientes naturales." style="width:214px" loading="lazy"></figure>
+<div class="recuadro"><p>¡La lotería Powerball tiene un premio de 81 millones de dólares, y las probabilidades de acertarla son mayores que en el Quini6!</p></div>
+<p>Tal vez ya estás familiarizado con algunas ideas de probabilidad, ya que ésta forma parte de la cultura cotidiana. Constantemente, se escucha a personas que hacen afirmaciones relacionadas con la probabilidad como las siguientes:</p>
+<ul><li>“Probablemente nuestro equipo gane el juego de esta noche”</li><li>“Hay 80% de posibilidades de que baje el zonda”</li><li>“Es más probable viajar para el fin de semana largo”</li><li>“Tengo una posibilidad de 50-50 de aprobar el examen de Inglés hoy”</li></ul>
+<p>Todo el mundo ha hecho o escuchado esta clase de afirmaciones. ¿Qué significan exactamente? ¿Significan, de hecho, lo que afirman? Algunas afirmaciones pueden estar basadas en información científica y otras en prejuicios subjetivos. Cualquiera sea el caso, son inferencias probabilísticas: no hechos, sino conjeturas.</p>
+<h3>EXPERIMENTOS ALEATORIOS</h3>
+<p>Se denomina experimento aleatorio (ε) al proceso que produce uno de varios resultados posibles. Por ejemplo: el lanzamiento de un dado, la extracción de una carta de un mazo bien barajado, a la salida de la terminal, etc.</p>
+<p>En la vida diaria existen muchos procesos aleatorios menos obvios. Por ejemplo: procesos de manufactura que originan productos defectuosos en una forma aleatoria, el tiempo de espera en una fila del supermercado, entre otros.</p>
+<h3>ESPACIO MUESTRAL</h3>
+<p>Se denomina espacio muestral (S) al conjunto de todos los resultados posibles de un experimento aleatorio.</p>
+<h3>SUCESOS O EVENTOS</h3>
+<p>Es cada subconjunto del espacio muestral. Lo simbolizaremos con E<sub>i</sub>.</p>
+<ul><li><strong>Evento complementario:</strong> es el conjunto de todos los resultados del espacio muestral que no se encuentran en E. Lo simbolizaremos <span style="text-decoration:overline">E</span>.</li><li><strong>Eventos mutuamente excluyentes:</strong> son aquellos cuya intersección es nula (vacía). Es decir, que no tienen elementos en común. La ocurrencia de cualquiera de ellos excluye la posibilidad de que ocurra otro cualquiera.</li></ul>
+<p>Analicemos un ejemplo: consideremos el experimento aleatorio tirar un dado y observar el número de la cara superior y los experimentos E1: obtener un número par, y E2 obtener un número impar.</p>
+<figure class="figura"><img src="materiales/contenido/unidad-2/u2-02-1.png" alt="Experimento ε: lanzamiento de un dado legal. Espacio muestral S = {1, 2, 3, 4, 5, 6}. E1: obtener un número par, E1 = {2, 4, 6}. E2: obtener un número impar, E2 = complemento de E1 = {1, 3, 5}. Estos eventos son mutuamente excluyentes, pues la intersección de E1 y E2 es el conjunto vacío." style="width:607px" loading="lazy"></figure>
+<h4>Más ejemplos:</h4>
+<div class="tabla"><table><caption>Ejemplos de experimento aleatorio, espacio muestral y suceso</caption><thead><tr><th scope="col">Experimento aleatorio</th><th scope="col">Espacio muestral</th><th scope="col">Suceso o evento</th></tr></thead><tbody><tr><td>Lanzar dos monedas legales</td><td>S = {(c, c), (c, s), (s, c}, (s, s)}</td><td>A : "obtener sólo una cara A = {(c, s), (s, c)}</td></tr><tr><td>Observar la duración de una lámpara (en horas)</td><td>S= {t / t ≥ 0}</td><td>A: "que tenga una duración inferior a 500 horas" A= { t / 0 &lt; t &lt; 500 }</td></tr></tbody></table></div>
+<h3>DEFINICIÓN CLÁSICA DE PROBABILIDAD</h3>
+<p>Laplace publicó en su obra en 1812 la siguiente definición: “Probabilidad de un suceso es la razón entre el número de casos favorables y el número total de casos posibles, siempre que nada obligue a creer que alguno de estos casos debe tener lugar de preferencia a los demás, lo que hace que todos sean para nosotros igualmente posibles”.</p>
+<p>Es una definición “a priori”, es decir que puede calcularse antes de realizar el experimento aleatorio.</p>
+<p>Entonces, la probabilidad de un evento E, será la razón entre el número de casos favorables y número de casos posibles.</p>
+<p class="formula-texto">P(E) = #CF / #CP &nbsp;&nbsp;&nbsp; 0 ≤ P(E) ≤ 1</p>
+<h4>Ejemplo:</h4>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-03-1.png" alt="Dibujo de un dado." style="width:84px" loading="lazy"></figure>
+<p>Considerando el ejemplo anterior del dado:</p>
+<p class="formula-texto">P(E<sub>1</sub>) = 3/6 = 0,5 ⇒ 50 %</p>
+<p>Si la probabilidad de un evento es nula P(E)=0, significa que no hay ningún caso favorable y, por lo tanto el suceso E es “imposible”. Si la probabilidad de un evento P(E)=1 significa que todos los casos posibles son favorables lo que hace que E sea un suceso “seguro” o “cierto”</p>
+<h3>ALGUNAS REGLAS DE PROBABILIDAD</h3>
+<p><u>Regla 1</u>: Si P(E) representa la probabilidad de que ocurra un evento E, la probabilidad de que no ocurra, denotada por P(<span style="text-decoration:overline">E</span>), será:</p>
+<p class="formula-texto">P(E) = 1 − P(<span style="text-decoration:overline">E</span>)</p>
+<p><u>Regla 2</u>: Si los eventos E<sub>1</sub> y E<sub>2</sub> son mutuamente excluyentes (es decir que no pueden ocurrir los dos a la vez), la probabilidad de que ocurra E<sub>1</sub> o E<sub>2</sub> es:</p>
+<p class="formula-texto">P(E<sub>1</sub> ∪ E<sub>2</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>)</p>
+<p>Generalizando, sean n eventos mutuamente excluyentes E<sub>1</sub>, E<sub>2</sub>, …, E<sub>n</sub>, la probabilidad de que ocurran E<sub>1</sub>, E<sub>2</sub>, … o E<sub>n</sub> es</p>
+<p class="formula-texto">P(E<sub>1</sub> ∪ E<sub>2</sub> ∪ … ∪ E<sub>n</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) + … + P(E<sub>n</sub>)</p>
+<p><u>Regla 3</u>: Si los eventos E<sub>1</sub> y E<sub>2</sub> no son mutuamente excluyentes (es decir que pueden ocurrir los dos a la vez), la probabilidad de la ocurrencia de los eventos E<sub>1</sub> o E<sub>2</sub> es</p>
+<p class="formula-texto">P(E<sub>1</sub> ∪ E<sub>2</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) − P(E<sub>1</sub> ∩ E<sub>2</sub>)</p>
+<h4>Ejemplo:</h4>
+<p>El departamento de obras públicas de una ciudad turística está preparándose para las vacaciones de invierno. Está planeando su necesidad de sal y arena para dar mantenimiento a las carreteras durante las nevadas y después de ellas. El análisis de los inviernos pasados ha producido las siguientes estimaciones de las probabilidades respecto al número previsto de grandes nevadas.</p>
+<figure class="figura"><img src="materiales/contenido/unidad-2/u2-04-1.png" alt="Dibujo de un trabajador palando nieve." style="width:166px" loading="lazy"></figure>
+<div class="tabla"><table><caption>Probabilidad del número de grandes nevadas</caption><thead><tr><th scope="col">N: n° de grandes nevadas</th><th scope="col">P(N)</th></tr></thead><tbody><tr><td>0</td><td>0,10</td></tr><tr><td>1</td><td>0,25</td></tr><tr><td>2</td><td>0,30</td></tr><tr><td>3</td><td>0,20</td></tr><tr><td>Más de 3</td><td>0,15</td></tr></tbody></table></div>
+<p>¿Qué probabilidad hay de que, el año entrante</p>
+<p>a) Caigan 3 o más nevadas?</p>
+<p>P(N ≥ 3) = 0,15</p>
+<p>b) Caigan 1 o 2 grandes nevadas?</p>
+<p>P(1 U 2) = P(1)+P(2) = 0,25 + 0,30 = 0,55</p>
+<p>c) Caigan menos de 2 nevadas?</p>
+<p>P(N &lt; 2) = P(0) + P(1) = 0,10 + 0,25 = 0,35</p>
+<h3><strong>Probabilidad conjunta</strong></h3>
+<p>Entendemos por probabilidad conjunta a la probabilidad de que dos o más eventos ocurran simultáneamente. En símbolos: P(A ∩ B)</p>
+<p>En forma general la probabilidad conjunta o la probabilidad de que dos sucesos A Y B ocurran simultáneamente, se puede calcular como:</p>
+<p class="formula-texto">P(A ∩ B) = #(A ∩ B) / n</p>
+<p>Siendo: # = Cantidad de veces<br>n = Cantidad de eventos</p>
+<p>Ejemplo: Supongamos que los empleados de una empresa en total 300, son clasificados transversalmente como personal gerencial y no gerencial y con estudios universitarios o no universitarios, la información se presenta en la siguiente tabla de doble entrada</p>
+<div class="tabla"><table><caption>Empleados según cargo y estudios</caption><thead><tr><th scope="col">Cargos / Estudios</th><th scope="col">Universitarios</th><th scope="col">No Universitarios</th><th scope="col">Total</th></tr></thead><tbody><tr><th scope="row">Gerencial</th><td>25</td><td>5</td><td>30</td></tr><tr><th scope="row">No gerencial</th><td>75</td><td>195</td><td>270</td></tr><tr><th scope="row">Total</th><td>100</td><td>200</td><td>300</td></tr></tbody></table></div>
+<p>Si se elige al azar un empleado ¿cuál es la probabilidad de que:</p>
+<p>a) Sea un personal gerencial universitario?</p>
+<p>b) Sea un personal no gerencial con estudios no universitarios?</p>
+<p>c) Sea un personal gerencial no universitario?</p>
+<h4>Solución:</h4>
+<p>Considerando los eventos:</p>
+<ul><li>G: Personal gerencial</li><li>G&#773;: Personal no gerencial</li><li>U: Empleado universitario</li><li>U&#773;: Empleado no universitario</li></ul>
+<p>Para determinar la probabilidad de ocurrencia simultánea de dos eventos aplicaremos la frecuencia de ocurrencia para calcular la probabilidad</p>
+<p>a) P(G ∩ U) = 25/300 = 0,083</p>
+<p>Interpretación: la probabilidad de seleccionar un personal gerencial universitario es de 0,083</p>
+<p>b) P(G&#773; ∩ U&#773;) = 195/300 = 0,65</p>
+<p>Interpretación: La probabilidad de seleccionar un personal no gerencial con estudio universitario es de 0,65</p>
+<p>c) P(G ∩ U&#773;) = 5/300 = 0,017</p>
+<p>Interpretación: La probabilidad de seleccionar un personal gerencial con estudio no universitario es de 0,017</p>
+<h3><strong>Probabilidad Condicional</strong></h3>
+<p>El interés recae en determinar la probabilidad de un evento A dado que ha ocurrido un evento B. en símbolos P (A/B).</p>
+<p>Es decir la probabilidad del evento A esta condicionada a la previa ocurrencia del evento B, por lo que recibe el nombre de probabilidad condicional de A dada la ocurrencia de B.</p>
+<p>Sean A Y B dos eventos que se encuentran en un espacio muestral S de manera tal que P (B) &gt; 0. La probabilidad condicional de A al ocurrir el evento B es:</p>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-f07-condicional.png" alt="P(A/B) = P(A ∩ B) dividido por P(B)." style="width:134px"></figure>
+<p><strong>Ejemplo: </strong>Consideremos nuevamente el ejemplo anterior</p>
+<p>a) Si se elige al azar un empleado resulta ser universitario ¿Cuál es la probabilidad de que sea personal gerencial?</p>
+<p>b) Si se elige al azar un empleado y resulta ser un personal gerencial ¿Cuál es la probabilidad de que sea universitario?</p>
+<h4>Solución:</h4>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-f07-gdadou.png" alt="P(G/U) = P(G ∩ U) dividido por P(U) = (25/300) dividido por (100/300) = 0,083 dividido por (1/3) = 0,25." style="width:278px"></figure>
+<p>Interpretación: la probabilidad de que un empleado sea personal gerencial dado que es universitario es de 0,25</p>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-f07-udadog.png" alt="P(U/G) = P(U ∩ G) dividido por P(G) = (25/300) dividido por (30/300) = 0,083 dividido por (1/10) = 0,83." style="width:278px"></figure>
+<p>Interpretación: la probabilidad de que un empleado sea universitario dado que es personal gerencial es de 0,25</p>
+<h3><strong>Eventos independientes</strong></h3>
+<p>Dos eventos son independientes si la ocurrencia o no ocurrencia de un evento de ninguna manera afecta a la posibilidad o probabilidad de ocurrencia del otro evento.</p>
+<p>Los resultados de los lanzamientos consecutivos de una moneda legal constituyen un ejemplo de eventos independientes. El hecho de que salga cara o cruz en un lanzamiento cualquiera no influye de ningún modo en la probabilidad de que salga uno u otro lado en el siguiente lanzamiento. Otro ejemplo lo encontramos en la generación aleatoria de productos aceptables o defectuosos. En tal proceso, se supone que la probabilidad de generar una unidad aceptable (o defectuosa) permanece inalterada durante un ensayo cualquiera, cualesquiera que hayan los resultados anteriores.</p>
+<p>Regla 4: La probabilidad conjunta de que dos eventos independientes E<sub>1 </sub>y E<sub>2 </sub>acontezcan al mismo tiempo o en sucesión es</p>
+<p class="formula-texto">P(E<sub>1</sub> ∩ E<sub>2</sub>) = P(E<sub>1</sub>) · P(E<sub>2</sub>)</p>
+<h4>Ejemplo:</h4>
+<p>La probabilidad de que una máquina produzca una unidad defectuosa es 0,05. Se supone que el proceso de producción se caracteriza por la independencia estadística. Se quiere determinar la probabilidad de que sean defectuosas dos piezas consecutivas.</p>
+<p>P (D y D) = P(D).P(D)= 0,05.0,05 = 0,0025</p>
+<p>Generalizando, sean n eventos mutuamente independientes E<sub>1</sub>, E<sub>2</sub>, …, E<sub>n</sub>, la probabilidad de que ocurran E<sub>1</sub>, E<sub>2</sub>, … y E<sub>n </sub>al mismo tiempo o en sucesión es</p>
+<p class="formula-texto">P(E<sub>1</sub> ∩ E<sub>2</sub> ∩ … ∩ E<sub>n</sub>) = P(E<sub>1</sub>) · P(E<sub>2</sub>) · … · P(E<sub>n</sub>)</p>
+<h3>Teorema de la probabilidad total</h3>
+<p>Si M1, M2, ..., Mn forman una partición del espacio muestral (es decir, son eventos mutuamente excluyentes y su unión es todo el espacio muestral), entonces la probabilidad de un evento A se calcula como:</p>
+<p>P(D) = P(D|M1)·P(M1) + P(D|M2)·P(M2) + ... + P(D|Mn)·P(Mn)</p>
+<figure class="fila"><img src="materiales/contenido/unidad-2/u2-08-2.png" alt="Esquema: el espacio muestral dividido en las partes M1, M2, …, Mn, con un evento D que ocupa parte de varias de ellas." style="width:227px" loading="lazy"><img src="materiales/contenido/unidad-2/u2-08-1.png" alt="P(D) = P(D/M1) por P(M1) + … + P(D/Mn) por P(Mn)." style="width:326px" loading="lazy"></figure>
+<h4>Ejemplo:</h4>
+<p>Una fábrica de pinturas produce y vende sólo dos tipos de pintura: látex y semiesmaltada. Con base a ventas históricas, la probabilidad de que un cliente compre látex es 0,75. De los que compran pintura látex, la probabilidad de que compren rodillos es del 60%, y de los compradores de pintura semiesmaltada el 30% compran rodillos.</p>
+<p>¿Cuál es la probabilidad de que un cliente compre un rodillo?</p>
+<p>L: “Cliente compra pintura látex”</p>
+<p>S: “Cliente compra pintura semiesmaltada”</p>
+<p>R: “Cliente compra rodillo”</p>
+<p>P(L) = 0,75 P(S) = 0,25</p>
+<p>P(R/L) = 0,60</p>
+<p>P(R/S) = 0,30</p>
+<figure class="figura"><img src="materiales/contenido/unidad-2/u2-09-1.png" alt="Diagrama: los clientes se dividen en L (látex) y S (semiesmaltada); el círculo R (rodillo) ocupa parte de ambos." style="width:152px" loading="lazy"></figure>
+<p>P(R) = P(L ∩ R) ∪ P(S ∩ R) =</p>
+<p>P(R) = P(R/L)* P(L)+ P(R/S) * P(S) =</p>
+<p>P(R) = 0,60*0,75 + 0,30*0,25 = 0,525</p>
+<h3><strong>Teorema de Bayes</strong></h3>
+<p>Si M1, M2, ..., Mn forman una partición del espacio muestral (es decir, son eventos mutuamente excluyentes y su unión es todo el espacio muestral), entonces la probabilidad de un evento A se calcula como:</p>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-09-2.png" alt="Teorema de Bayes: P(Mk/D) = P(D/Mk) por P(Mk), dividido por la suma P(D/M1) por P(M1) + … + P(D/Mn) por P(Mn)." style="width:505px" loading="lazy"></figure>
+<figure class="figura"><img src="materiales/contenido/unidad-2/u2-09-3.png" alt="Esquema: el espacio muestral dividido en las partes M1, M2, …, Mn, con un evento D que ocupa parte de varias de ellas." style="width:275px" loading="lazy"></figure>
+<h4><strong>Ejemplo:</strong></h4>
+<p>Una fábrica de pinturas produce y vende sólo dos tipos de pintura: látex y semiesmaltada. Con base a ventas históricas, la probabilidad de que un cliente compre látex es 0,75. De los que compran pintura látex, la probabilidad de que compren rodillos es del 60%, y de los compradores de pintura semiesmaltada el 30% compran rodillos.</p>
+<p><strong>Si el cliente compró un rodillo ¿que tan probable es que haya comprado pintura latex?</strong></p>
+<p class="formula-texto"><strong>P(L) = 0,75 P(S) = 0,25</strong></p>
+<p class="formula-texto"><strong>P(R/L) = 0,60</strong></p>
+<p class="formula-texto"><strong>P(R/S) = 0,30</strong></p>
+<p class="formula-texto"><strong>P(R) = P(R/L)* P(L)+ P(R/S) * P(S) =</strong></p>
+<p class="formula-texto"><strong>P(R) = 0,60*0,75+0,30*0,25=0,525</strong></p>
+<figure class="formula"><img src="materiales/contenido/unidad-2/u2-f10-bayes.png" alt="P(L/R) = P(R/L) por P(L) dividido por P(R) = 0,60 por 0,75 dividido por 0,525 = 0,455 dividido por 0,525 = 0,85714." style="width:281px"></figure>

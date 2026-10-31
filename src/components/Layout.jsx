@@ -19,7 +19,7 @@ import MenuRounded from '@mui/icons-material/MenuRounded'
 import HomeRounded from '@mui/icons-material/HomeRounded'
 import SchoolRounded from '@mui/icons-material/SchoolRounded'
 import { UNIDADES } from '../data/materiales.js'
-import { ESTILO_COMPLEMENTARIO, ESTILO_UNIDAD } from '../identidad.js'
+import { ESTILO_UNIDAD } from '../identidad.js'
 import { COLORES } from '../theme.js'
 
 const ANCHO_MENU = 280
@@ -35,13 +35,6 @@ const ENLACES = [
     contraste: ESTILO_UNIDAD[u.numero].contraste,
     oscuro: ESTILO_UNIDAD[u.numero].oscuro,
   })),
-  {
-    ruta: '/complementario',
-    texto: 'Material complementario',
-    Icono: ESTILO_COMPLEMENTARIO.Icono,
-    color: ESTILO_COMPLEMENTARIO.principal,
-    contraste: ESTILO_COMPLEMENTARIO.contraste,
-  },
 ]
 
 function Marca() {
@@ -154,7 +147,7 @@ export default function Layout() {
       <Box sx={{ mt: 'auto', p: 2.5 }}>
         <Box sx={{ p: 2, borderRadius: '14px', bgcolor: alpha(COLORES.dorado, 0.14) }}>
           <Typography variant="body2" sx={{ fontWeight: 600 }}>
-            Todo el material disponible se puede ver o descargar. Algunos recursos están pendientes de recibir.
+            Todo el material se puede ver o descargar.
           </Typography>
         </Box>
       </Box>
