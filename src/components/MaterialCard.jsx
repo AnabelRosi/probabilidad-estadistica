@@ -48,11 +48,12 @@ function notaDe(material) {
 
 export default function MaterialCard({ material, Icono, estilo }) {
   const disponible = material.estado === ESTADOS.disponible && material.archivo
-  const urlVista = material.vista || (FORMATOS_VISIBLES.includes(material.formato) ? material.archivo : null)
-  const visible = Boolean(disponible && urlVista)
+  // Si el material tiene visor de páginas en la unidad (PPTX/DOCX), no hace falta el botón "Ver"
+  const conVisor = Boolean(material.vista)
+  const visible = Boolean(disponible && !conVisor && FORMATOS_VISIBLES.includes(material.formato))
   const { Icono: IconoEstado } = PRESENTACION_ESTADO[material.estado]
-  const nota = disponible && material.vista
-    ? `Para leerlo en esta página usá "Ver aquí" (más abajo). "Ver" abre el PDF en otra pestaña y "Descargar" baja el archivo original (${material.formato}).`
+  const nota = disponible && conVisor
+    ? `Para leerlo sin salir de esta página usá "Ver aquí" (más abajo). "Descargar" baja el archivo original (${material.formato}).`
     : disponible && !visible
       ? `El navegador no muestra archivos ${material.formato}: descargalo para abrirlo con un programa compatible.`
       : notaDe(material)
@@ -129,10 +130,10 @@ export default function MaterialCard({ material, Icono, estilo }) {
               variant="contained"
               size="small"
               startIcon={<VisibilityRounded />}
-              href={urlMaterial(urlVista)}
+              href={urlMaterial(material.archivo)}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Ver ${material.titulo} (${material.vista ? 'PDF' : material.formato}, se abre en una pestaña nueva)`}
+              aria-label={`Ver ${material.titulo} (${material.formato}, se abre en una pestaña nueva)`}
             >
               Ver
             </Button>

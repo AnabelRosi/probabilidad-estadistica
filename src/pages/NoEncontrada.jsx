@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router'
 import { Box, Button, Typography } from '@mui/material'
 import SearchOffRounded from '@mui/icons-material/SearchOffRounded'
 import HomeRounded from '@mui/icons-material/HomeRounded'

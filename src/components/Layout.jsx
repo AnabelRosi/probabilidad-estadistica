@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link as RouterLink, Outlet, useLocation } from 'react-router-dom'
+import { Link as RouterLink, Outlet, useLocation } from 'react-router'
 import {
   AppBar,
   Box,

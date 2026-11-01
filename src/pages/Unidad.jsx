@@ -1,14 +1,14 @@
 import { useEffect } from 'react'
-import { Link as RouterLink, useParams } from 'react-router-dom'
-import { Box, Breadcrumbs, Button, Chip, Grid, Link, Stack, Typography } from '@mui/material'
+import { Link as RouterLink, useParams } from 'react-router'
+import { Box, Breadcrumbs, Button, Chip, Link, Stack, Typography } from '@mui/material'
 import { alpha } from '@mui/material/styles'
 import ArrowBackRounded from '@mui/icons-material/ArrowBackRounded'
 import ArrowForwardRounded from '@mui/icons-material/ArrowForwardRounded'
 import DownloadRounded from '@mui/icons-material/DownloadRounded'
 import OpenInNewRounded from '@mui/icons-material/OpenInNewRounded'
-import MaterialCard from '../components/MaterialCard.jsx'
+import Desplegable from '../components/Desplegable.jsx'
 import ContenidoApunte from '../components/ContenidoApunte.jsx'
-import VisorPaginas from '../components/VisorPaginas.jsx'
+import VisorPaginas, { paginasDe } from '../components/VisorPaginas.jsx'
 import Encabezado from '../components/Encabezado.jsx'
 import NoEncontrada from './NoEncontrada.jsx'
 import { UNIDADES, materialesDeUnidad, nombreArchivo, urlMaterial } from '../data/materiales.js'
@@ -116,8 +116,22 @@ function Informacion({ material, unidad, estilo }) {
       </Stack>
       <ContenidoApunte numero={unidad.numero} titulo={unidad.titulo} estilo={estilo} />
       <Stack direction="row" flexWrap="wrap" useFlexGap spacing={1.5} sx={{ mt: 3 }}>
-        <Button variant="contained" size="large" startIcon={<DownloadRounded />} href={url} download={nombreArchivo(material.archivo)}>
+        <Button variant="outlined" startIcon={<DownloadRounded />} href={url} download={nombreArchivo(material.archivo)}>
           Descargar apunte (PDF)
+        </Button>
+      </Stack>
+    </>
+  )
+}
+
+// Presentación o trabajo práctico: se lee en la página y, al final, se puede descargar el original
+function DocumentoConVisor({ material, unidad, clave, etiqueta }) {
+  return (
+    <>
+      <VisorPaginas unidad={unidad} clave={clave} />
+      <Stack direction="row" flexWrap="wrap" useFlexGap spacing={1.5} sx={{ mt: 3 }}>
+        <Button variant="outlined" startIcon={<DownloadRounded />} href={urlMaterial(material.archivo)} download={nombreArchivo(material.archivo)}>
+          Descargar {etiqueta} ({material.formato})
         </Button>
       </Stack>
     </>
@@ -143,7 +157,7 @@ export default function Unidad() {
   const tp = de('tp')
 
   return (
-    <Box>
+    <Box key={unidad.numero}>
       <Breadcrumbs aria-label="Ubicación" sx={{ mb: 2 }}>
         <Link component={RouterLink} to="/" underline="hover" color="text.secondary">
           Inicio
@@ -162,31 +176,21 @@ export default function Unidad() {
       )}
 
       {apunte && (
-        <Seccion id="titulo-informacion" Icono={ICONO_TIPO.teoria} titulo="Información de la unidad" estilo={estilo}>
+        <Desplegable id="informacion" Icono={ICONO_TIPO.teoria} titulo="Información de la unidad" descripcion="Teoría completa de la unidad" estilo={estilo}>
           <Informacion material={apunte} unidad={unidad} estilo={estilo} />
-        </Seccion>
+        </Desplegable>
       )}
 
       {presentacion && (
-        <Seccion id="titulo-presentacion" Icono={ICONO_TIPO.presentacion} titulo="Presentación" estilo={estilo}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={4}>
-              <MaterialCard material={presentacion} Icono={ICONO_TIPO.presentacion} estilo={estilo} />
-            </Grid>
-          </Grid>
-          <VisorPaginas unidad={unidad.numero} clave="pres" titulo="la presentación" estilo={estilo} />
-        </Seccion>
+        <Desplegable id="presentacion" Icono={ICONO_TIPO.presentacion} titulo="Presentación" descripcion={`${paginasDe(unidad.numero, 'pres')} diapositivas`} estilo={estilo}>
+          <DocumentoConVisor material={presentacion} unidad={unidad.numero} clave="pres" etiqueta="presentación" />
+        </Desplegable>
       )}
 
       {tp && (
-        <Seccion id="titulo-tp" Icono={ICONO_TIPO.tp} titulo="Trabajo práctico" estilo={estilo}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={4}>
-              <MaterialCard material={tp} Icono={ICONO_TIPO.tp} estilo={estilo} />
-            </Grid>
-          </Grid>
-          <VisorPaginas unidad={unidad.numero} clave="tp" titulo="el trabajo práctico" estilo={estilo} />
-        </Seccion>
+        <Desplegable id="tp" Icono={ICONO_TIPO.tp} titulo="Trabajo práctico" descripcion={`${paginasDe(unidad.numero, 'tp')} páginas`} estilo={estilo}>
+          <DocumentoConVisor material={tp} unidad={unidad.numero} clave="tp" etiqueta="trabajo práctico" />
+        </Desplegable>
       )}
 
       <NavegacionUnidades numero={unidad.numero} />
